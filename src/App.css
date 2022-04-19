@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import fonts */
+
+@font-face {
+  font-family: "font-standard";
+  src: url("./assets/fonts/fontRobotoSlab.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "font-got";
+  src: url("./assets/fonts/fontGot.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* Set CSS variables */
 
-.App-link {
-  color: #61dafb;
-}
+:root {
+  /* Common to both winter and summer modes */
+  --color-font-dark: #252429;
+  --color-font-light: #ffffff;
+  --color-heart-icon: #931613;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  /* Winter mode  */
+  --color-winter-primary: #9fadba;
+  --color-winter-header: #597388;
+  --color-winter-footer: #c4c4c4;
+  --color-winter-background: #e5e7eb;
+  --color-winter-button: #88b1d7;
+
+  /* Winter mode on hover */
+  --color-winter-hover-mobile-footer: #9fadba;
+  --color-winter-hover-desktop-header: #9fadba;
+
+  /* Summer mode */
+  --color-summer-primary: #f3f0d7;
+  --color-summer-header: #d9a66d;
+  --color-summer-footer: #d9a66d;
+  --color-summer-background: #e0c097;
+  --color-summer-button: #ecb0b0;
+
+  /* Summer mode on hover */
+  --color-summer-hover-mobile-footer: #f3f0d7;
+  --color-summer-hover-desktop-header: #f3f0d7;
 }
