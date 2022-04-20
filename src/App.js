@@ -1,12 +1,12 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import ProfileInfoCard from "./components/ProfileInfoCard";
 
 function App() {
   return (
     <div className="App">
-      Bienvenue groupe 404 ! HOOO
       <Routes>
-        <Route />
+        <Route path='/' element={<ProfileInfoCard />}/>
       </Routes>
     </div>
   );
