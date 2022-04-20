@@ -5,6 +5,11 @@ import queenLogo from "../assets/icons/queen.png";
 import { useState } from "react";
 
 function MobileFooter() {
+
+  /* The following multiple useState will be replaced with a single condition in className.
+  ex : ${window.location.pathname === '/' ? 'bg-color-winter-hover-mobile-footer' : ''}
+  Just waiting for the routes.
+*/
   const [isClicked1, setIsClicked1] = useState(false);
   const [isClicked2, setIsClicked2] = useState(false);
   const [isClicked3, setIsClicked3] = useState(false);
