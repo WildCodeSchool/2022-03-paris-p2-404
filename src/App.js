@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { SearchBar } from "./components/SearchBar./SearchBar";
+import { SearchBar } from "./components/SearchBar/SearchBar";
 
 function App() {
   return (
