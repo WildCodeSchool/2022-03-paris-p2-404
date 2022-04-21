@@ -22,6 +22,8 @@
   box-sizing: border-box;
 }
 
+
+
 /* Set CSS variables */
 
 :root {
@@ -52,3 +54,4 @@
   --color-summer-hover-mobile-footer: #f3f0d7;
   --color-summer-hover-desktop-header: #f3f0d7;
 }
+
