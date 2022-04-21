@@ -86,7 +86,7 @@ export const UserQuote = ({ character }) => {
   }
 
   return (
-    <div className="UserQuote w-full pt-3">
+    <div className="UserQuote w-full p-7 text-center font-bold text-lg">
       <p>{quote}</p>
     </div>
   );

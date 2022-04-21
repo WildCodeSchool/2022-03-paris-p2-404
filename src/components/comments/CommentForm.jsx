@@ -1,13 +1,10 @@
-import React from 'react';
-import { useState} from 'react';
-import ChatIcon from '@mui/icons-material/Chat';
-import { LikeCounter } from '../LikeCounter';
+import React from "react";
+import { useState } from "react";
+import ChatIcon from "@mui/icons-material/Chat";
+import { LikeCounter } from "../LikeCounter";
 
 export const CommentForm = (props) => {
-
-  
-
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
 
   const handleChange = (e) => {
     setInput(e.target.value);
@@ -16,32 +13,28 @@ export const CommentForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-   
-
     props.onSubmit({
       id: Math.floor(Math.random() * 10000),
       text: input,
     });
 
-    setInput('');
+    setInput("");
   };
 
   const [commentCount, setCommentCount] = useState(
     Math.floor(Math.random() * (29 - 1) + 1)
   );
 
-
-
   const handleClickIncrement = () => {
-    if(input===''){
-      return alert('***  Text needed here  ****');}
-      else{
-    setCommentCount(commentCount + 1);}
+    if (input === "") {
+      return alert("***  Text needed here  ****");
+    } else {
+      setCommentCount(commentCount + 1);
+    }
   };
-  
-  
+
   return (
-    <div class="mx-4 p-4 bg-color-winter-primary rounded-lg shadow-black shadow-md">
+    <div class="mx-4 p-2 rounded-lg mb-3">
       <div class="flex flex-row gap-x-2">
         <div>
           <LikeCounter />
