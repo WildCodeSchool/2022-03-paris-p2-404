@@ -7,26 +7,32 @@ import Navbar from "./components/Navbar";
 import MobileHeader from "./components/MobileHeader";
 import {UserPost} from "./components/UserPost";
 import Profile_Interact_Button from "./components/Profile_Interact_Button";
-import { CoverPictures } from "./components/coverPictures/CoverPictures";
 
 
 function App() {
   
   return (
     <div className="App">
-      <h2>Mobile Header</h2>
-    <MobileHeader />
-    <h2>Notifications</h2>
-    <NotifUserList />
+      <div className="hidden sm:block ">
+          <Navbar />
+          <div className="flex flex-col m-8  justify-center content-center items-center">
+          <SearchBar/>
+          <UserPost />
+          <div className="m-4">
+          <Profile_Interact_Button />
+          </div>
+          </div>
+      </div>
 
-     <MobileFooter/>
+      <div className="sm:hidden flex flex-col justify-center content-center items-center">
+          <MobileHeader />
+          <NotifUserList />
+          <div className="absolute bottom-0 w-screen">
+          <MobileFooter/>
+          </div>
+      </div>
       
-      <Navbar />
-      <SearchBar/>
-      <UserPost />
-      <CoverPictures />
-      <Profile_Interact_Button />
-     
+      
       <Routes>
         <Route/>
       </Routes>
