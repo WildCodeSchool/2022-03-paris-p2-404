@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ProfilePicture from "./ProfilePicture";
 
 function ProfileInfoCard() {
     const [profiles, setProfiles] = useState({});
@@ -15,8 +16,7 @@ console.log(profiles);
 
     return(
         <div>
-          <img className="rounded-full border-4 border-black" src={profiles.imageUrl} alt="profile portrait" />
-          <div className="isConnected bg-green-700 h-7 w-7 rounded-full"></div>
+          <ProfilePicture profiles={profiles}/>
         </div>
     );
 };
