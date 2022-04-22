@@ -8,6 +8,7 @@ import axios from "axios";
 import { PostPicture } from "./PostPicture";
 import { UserInfo } from "./UserInfo";
 import { UserQuote } from "./UserQuote";
+import { CommentList } from "../components/comments/CommentList";
 
 // UserPost component
 export const UserPost = () => {
@@ -24,7 +25,7 @@ export const UserPost = () => {
   let randomId = Math.floor(Math.random() * 53);
 
   return (
-    <div className="UserPost bg-color-winter-background w-3/5 mt-5 rounded-lg pb-4">
+    <div className="UserPost bg-color-winter-primary w-full md:w-3/5 mt-5 rounded-lg text-color-font-dark">
       <div className="postHeader flex gap-x-4 pt-4 pl-10 pb-4">
         {/* Display profile picture */}
         <PostPicture character={character} />
@@ -32,9 +33,13 @@ export const UserPost = () => {
         <UserInfo character={character} />
       </div>
       <hr className="border-1 border-black" />
-      <div className="postContent mx-10">
+      <div className="postContent px-10">
         {/* Display post content */}
         <UserQuote character={character} />
+      </div>
+      <hr className="border-1 border-black shadow-black shadow-sm" />
+      <div className="font-[font-standard]">
+        <CommentList />
       </div>
     </div>
   );
