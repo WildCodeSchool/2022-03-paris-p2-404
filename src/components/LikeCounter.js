@@ -14,11 +14,15 @@ export const LikeCounter = () => {
   // Set up state to know whether you already liked a post or not
   const [liked, setLiked] = useState(false);
 
+  const [likedMessage, setLikedMessage] = useState(` Liked this post`);
+  
+
   // Increment counter of likes and set state of 'liked' to true so that a user can only like a post once
   const handleClickIncrement = () => {
     if (!liked) {
       setLikeCount(likeCount + 1);
       setLiked(true);
+      setLikedMessage(` You and ${likeCount} others liked this post`);
     }
   };
 
@@ -27,11 +31,12 @@ export const LikeCounter = () => {
     if (liked) {
       setLikeCount(likeCount - 1);
       setLiked(false);
+      setLikedMessage(` liked this post`);
     }
   };
 
   return (
-    <div className="LikeCounter flex gap-x-0.5">
+    <div className="LikeCounter flex">
       {/* Display outlined or filled icon depending on whether you already liked a post or not */}
       {!liked ? (
         <FavoriteBorderIcon
@@ -46,7 +51,7 @@ export const LikeCounter = () => {
       )}
 
       {/* Display counter */}
-      <div className="font-[font-standard] text-base">{likeCount}</div>
+      <div className="font-[font-standard] text-base"><span class='font-bold'>{likeCount}</span>{likedMessage}</div>
     </div>
   );
 };
