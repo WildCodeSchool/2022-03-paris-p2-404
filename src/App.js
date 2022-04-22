@@ -7,10 +7,12 @@ import NotifUserList from "./components/NotifUserList";
 import CommentList from "./components/comments/CommentList";
 import Navbar from "./components/Navbar";
 
+
 function App() {
   
   return (
     <div className="App">
+    <MobileHeader />
      <MobileFooter/>
       <NotifUserList />
       <Navbar />
