@@ -1,10 +1,10 @@
-import axios from 'axios';
-import React from 'react';
-import { useState, useEffect } from 'react';
+import axios from "axios";
+import React from "react";
+import { useState, useEffect } from "react";
 
 export const Comment = ({ comments, completeComments }) => {
   const [characters, setCharacters] = useState([]);
-  const url = 'https://thronesapi.com/api/v2/Characters';
+  const url = "https://thronesapi.com/api/v2/Characters";
 
   useEffect(() => {
     axios
@@ -13,36 +13,35 @@ export const Comment = ({ comments, completeComments }) => {
       .then((data) => setCharacters(data));
   }, []);
 
- 
-
   return comments.map((comment, index) => (
     <div
-      className={comment.isComplete ? 'todo-row complete' : 'todo-row'}
+      className={comment.isComplete ? "todo-row complete" : "todo-row"}
       key={index}
     >
       <div
         key={comment.id}
         onClick={() => completeComments(comment.id)}
-        class="flex  flex-row gap-4 mx-4 my-0.5 shadow-black shadow-md p-4 bg-color-winter-primary rounded-lg "
+        class="flex  flex-row gap-4 mx-4 my-0.5 border-t border-black p-4 bg-color-winter-primary"
       >
         <div class="flex flex-row items-start gap-4">
           <div>
             <img
               src={characters[2].imageUrl}
               alt="#"
-              class="rounded-full w-24 h-auto "
+              class="rounded-full w-12 h-auto "
             />
           </div>
           <div>
-            <h3 class="flex flex-row font-bold font-got">{characters[2].fullName}</h3>
-            <p class='font-light'>The wall, today </p>
+            <h3 class="flex flex-row font-bold font-got">
+              {characters[2].fullName}
+            </h3>
+            <p class="font-light">The wall, today </p>
           </div>
         </div>
-        <div class="flex justify-center items-center text-center  bg-opacity-40  rounded-md w-8/12 ">
+        <div class="flex justify-center items-center text-center bg-opacity-40 rounded-md w-8/12 ">
           "{comment.text}"
         </div>
       </div>
-      {/* <div className="icons"></div> */}
     </div>
   ));
 };
