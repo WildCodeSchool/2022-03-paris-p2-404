@@ -27,7 +27,7 @@ function App() {
       <div className="sm:hidden flex flex-col justify-center content-center items-center">
           <MobileHeader />
           <NotifUserList />
-          <div className="absolute bottom-0 w-screen">
+          <div className="sticky bottom-0 w-screen">
           <MobileFooter/>
           </div>
       </div>
