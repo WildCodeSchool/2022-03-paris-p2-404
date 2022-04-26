@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import ProfilePicture from "./ProfilePicture";
+import ProfileName from "./ProfileName";
 
 function ProfileInfoCard() {
     const [profiles, setProfiles] = useState({});
@@ -17,6 +18,7 @@ console.log(profiles);
     return(
         <div>
           <ProfilePicture profiles={profiles}/>
+          <ProfileName profiles = {profiles} />
         </div>
     );
 };
