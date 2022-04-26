@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import MobileHeader from "./components/MobileHeader";
 import MobileFooter from "./components/MobileFooter";
 import SearchBar from "./components/SearchBar/SearchBar";
 import NotifUserList from "./components/NotifUserList";
@@ -13,12 +14,10 @@ function App() {
   return (
     <div className="App">
     <MobileHeader />
-     <MobileFooter/>
-      <NotifUserList />
-      <Navbar />
+
+    
       Bienvenue groupe 404 ! HOOO
-      <SearchBar/>
-      <CommentList/>
+    
       <Routes>
         <Route/>
       </Routes>
@@ -27,3 +26,11 @@ function App() {
 }
 
 export default App;
+
+{/* ----------ROUTING -----------------------
+<Route path="/login" element={<LoginPage/>} />
+<Route path="/profile" element={<ProfilePage/>} />
+<Route path"/profile/:id" element={<ProfileUsersPage/>}
+<Route path="/notification" element={<NotificationMobilePage />}
+<Route path="/map" element={<MapPage />}
+*/}
