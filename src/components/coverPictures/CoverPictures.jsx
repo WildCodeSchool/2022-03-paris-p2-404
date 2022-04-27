@@ -1,9 +1,14 @@
 import React from 'react';
 
-export const CoverPictures = ({ character }) => {
+export const CoverPictures = (props) => {
+  
+  console.log(props);
+  const { family } = props.profiles;
+  console.log(family);
+
   let cover;
 
-  switch (character.family) {
+  switch (family) {
     case 'House Stark' || 'Stark':
       cover = [
         'https://wallpapercave.com/wp/wp3090365.jpg',
