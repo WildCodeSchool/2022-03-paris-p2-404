@@ -1,12 +1,12 @@
 import React from 'react'
 
-const NotifSamwellCard = ({samwell}) => {
+const NotifSamwellCard = ({samwell, date}) => {
   return (
 <div className=''>
-    <ul className='ml-2 mr-2'>
-        <li className='flex flex-row items-center bg-color-winter-primary rounded-3xl border-solid border-2 border-black	'> 
-            <img src={samwell.imageUrl} alt={samwell.firstName} className="rounded-full w-20 h-20" />
-             <p className='ml-10'><span className='font-bold'>{samwell.firstName}</span> send you a friend request </p> 
+    <ul className='mx-2 shadow-color-font-dark shadow-md rounded-2xl'>
+        <li className='flex flex-row justify-between items-center bg-color-winter-primary border-solid border rounded-2xl border-black	'> 
+            <img src={samwell.imageUrl} alt={samwell.firstName} className="rounded-full object-cover h-12 w-12 m-2" />
+             <p ><span className='font-bold'>{samwell.firstName}</span> send you a friend request </p> <p className='mx-4'>{date}</p>
         </li>
     </ul>
 </div>

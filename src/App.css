@@ -5,13 +5,13 @@
 /* Import fonts */
 
 @font-face {
-  font-family: "font-standard";
-  src: url("./assets/fonts/fontRobotoSlab.ttf");
+  font-family: 'font-standard';
+  src: url('./assets/fonts/fontRobotoSlab.ttf');
 }
 
 @font-face {
-  font-family: "font-got";
-  src: url("./assets/fonts/fontGot.ttf");
+  font-family: 'font-got';
+  src: url('./assets/fonts/fontGot.ttf');
 }
 
 /* Reset CSS */
@@ -27,6 +27,19 @@
 body {
   font-family: "font-standard";
 }
+/* body::-webkit-scrollbar {
+  width: 0 !important;
+}
+body {
+  -ms-overflow-style: none;
+}
+body {
+  overflow: -moz-scrollbars-none;
+} */
+body{
+  scrollbar-width: none;
+}
+
 
 h1,
 h2,
@@ -63,4 +76,14 @@ h3 {
   /* Summer mode on hover */
   --color-summer-hover-mobile-footer: #f3f0d7;
   --color-summer-hover-desktop-header: #f3f0d7;
+}
+
+
+.footerM,.headerM,.navbar{
+  box-shadow: 0px 0px 16px var(--color-font-dark);
+  position:fixed;
+  z-index: 10000000;
+}
+.footerM{
+  bottom:0;
 }

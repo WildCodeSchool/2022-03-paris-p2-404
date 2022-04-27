@@ -45,13 +45,13 @@ export const SearchBar = () => {
           <SearchIcon/>
         </button>
       </div>
-      <div className="dropdown my-1 rounded-lg bg-slate-300  border-black  empty:border-0">
+      <div className="dropdown my-1 rounded-lg bg-slate-300  border-black  empty:border-0 shadow-md shadow-color-font-dark">
         {characters
         .filter((character) => {
             const searchCharacter = value.toLocaleLowerCase();
             const fullName = character.fullName.toLowerCase();
 
-            return searchCharacter && fullName.startsWith(searchCharacter) && fullName !== searchCharacter;
+            return searchCharacter && fullName.includes(searchCharacter) && fullName !== searchCharacter;
         })
         .slice(0, 10) // limit to 10 results
         .map((character, index) => (
