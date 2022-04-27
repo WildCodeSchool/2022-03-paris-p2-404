@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import ProfileInfoCard from "./components/ProfileInfoCard";
 import MobileFooter from "./components/MobileFooter";
 import SearchBar from "./components/SearchBar/SearchBar";
 import NotifUserList from "./components/NotifUserList";
@@ -12,15 +13,8 @@ function App() {
   
   return (
     <div className="App">
-    <MobileHeader />
-     <MobileFooter/>
-      <NotifUserList />
-      <Navbar />
-      Bienvenue groupe 404 ! HOOO
-      <SearchBar/>
-      <CommentList/>
       <Routes>
-        <Route/>
+        <Route path='/' element={<ProfileInfoCard />}/>
       </Routes>
     </div>
   );
