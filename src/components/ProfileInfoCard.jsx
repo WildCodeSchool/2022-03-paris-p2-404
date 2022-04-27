@@ -22,11 +22,19 @@ console.log(profiles);
     return(
         <div>
           <Navbar />
-          <CoverPictures profiles={profiles} />
-          <ProfilePicture profiles={profiles}/>
-          <Profile_Interact_Button />
-          <ProfileName profiles = {profiles} />
-          <ProfileQuote profiles = {profiles} />
+          <div className="flex flex-col items-center ">
+            <div className="relative flex flex-col items-center">   
+              <CoverPictures profiles={profiles} />
+              <div className="absolute -bottom-24">
+              <ProfilePicture profiles={profiles}/>
+              </div>
+            </div> 
+            <div>
+            <Profile_Interact_Button />
+              <ProfileName profiles = {profiles} />
+              <ProfileQuote profiles = {profiles} />
+              </div>
+            </div>
         </div>
     );
 };

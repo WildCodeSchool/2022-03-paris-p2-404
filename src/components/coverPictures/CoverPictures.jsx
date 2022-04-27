@@ -158,7 +158,7 @@ export const CoverPictures = (props) => {
 
   return (
     <div>
-      <img alt="cover" src={cover[Math.floor(Math.random() * 4)]} />
+      <img className='w-screen max-h-96 object-cover' alt="cover" src={cover[Math.floor(Math.random() * 4)]} />
     </div>
   );
 };
