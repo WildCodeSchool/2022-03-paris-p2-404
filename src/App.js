@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import ProfileInfoCard from "./components/ProfileInfoCard";
 import MobileFooter from "./components/MobileFooter";
 import SearchBar from "./components/SearchBar/SearchBar";
 import NotifUserList from "./components/NotifUserList";
@@ -12,10 +13,14 @@ import { HomePage } from "./pages/HomePage";
 function App() {
   
   return (
-    <div className="App -z-50">
-    
+    <div className="App">
       <Routes>
-        <Route path="/" element={<HomePage/>}/>
+        <Route path="/" element={< HomePage />} />
+        {/* <Route path="/login" element={< LoginPage />} /> */}
+        <Route path="/users/:id" element={< ProfileInfoCard />} />
+        <Route path="/myprofile" element={""} />
+        <Route path="/latest" element={< NotifUserList />} />
+        {/* <Route path="/map" element={<Map />} /> */}
       </Routes>
     </div>
   );

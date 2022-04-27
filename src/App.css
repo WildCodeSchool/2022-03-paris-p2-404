@@ -22,8 +22,10 @@
   box-sizing: border-box;
 }
 
+/* Standardize fonts */
+
 body {
-  font-family: 'font-standard';
+  font-family: "font-standard";
 }
 /* body::-webkit-scrollbar {
   width: 0 !important;
@@ -42,9 +44,8 @@ body{
 h1,
 h2,
 h3 {
-  font-family: 'font-got';
+  font-family: "font-got";
 }
-
 
 /* Set CSS variables */
 
@@ -77,11 +78,6 @@ h3 {
   --color-summer-hover-desktop-header: #f3f0d7;
 }
 
-/* .maincontent {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-} */
 
 .footerM,.headerM,.navbar{
   box-shadow: 0px 0px 16px var(--color-font-dark);
