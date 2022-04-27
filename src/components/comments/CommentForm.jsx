@@ -1,10 +1,10 @@
-import React from "react";
-import { useState } from "react";
-import ChatIcon from "@mui/icons-material/Chat";
-import { LikeCounter } from "../LikeCounter";
+import React from 'react';
+import { useState } from 'react';
+import ChatIcon from '@mui/icons-material/Chat';
+import { LikeCounter } from '../LikeCounter';
 
 export const CommentForm = (props) => {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState('');
 
   const handleChange = (e) => {
     setInput(e.target.value);
@@ -18,7 +18,7 @@ export const CommentForm = (props) => {
       text: input,
     });
 
-    setInput("");
+    setInput('');
   };
 
   const [commentCount, setCommentCount] = useState(
@@ -26,8 +26,8 @@ export const CommentForm = (props) => {
   );
 
   const handleClickIncrement = () => {
-    if (input === "") {
-      return alert("***  Text needed here  ****");
+    if (input === '') {
+      return alert('***  Text needed here  ****');
     } else {
       setCommentCount(commentCount + 1);
     }
@@ -42,9 +42,7 @@ export const CommentForm = (props) => {
         <div class="mx-1 text-color-winter-background">
           <ChatIcon />
           <span
-            class="text-color-font-dark font-bold mx-1
-"
-          >
+            class="text-color-font-dark font-bold mx-1">
             {commentCount}
           </span>
         </div>
@@ -57,12 +55,12 @@ export const CommentForm = (props) => {
           name="text"
           className="comment-input"
           onChange={handleChange}
-          class="border-0 rounded-2xl px-2 my-2 shadow-inner shadow-color-winter-header "
+          class="border-0 w-full rounded-2xl px-2 my-2 shadow-inner shadow-color-winter-header "
         />
 
         <button
           onClick={handleClickIncrement}
-          className="comment-button font-light border rounded-2xl px-2 m-2 bg-color-winter-button border-black hover:bg-color-winter-header hover:text-color-font-light shadow-sm shadow-color-winter-header "
+          className="comment-button shadow-md shadow-color-font-dark font-light border rounded-2xl px-2 my-2 bg-color-winter-button border-black hover:bg-color-winter-header hover:text-color-font-light hover:shadow-sm hover:shadow-color-font-dark transition-shadow"
         >
           Add comment
         </button>

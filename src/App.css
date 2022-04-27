@@ -5,13 +5,13 @@
 /* Import fonts */
 
 @font-face {
-  font-family: "font-standard";
-  src: url("./assets/fonts/fontRobotoSlab.ttf");
+  font-family: 'font-standard';
+  src: url('./assets/fonts/fontRobotoSlab.ttf');
 }
 
 @font-face {
-  font-family: "font-got";
-  src: url("./assets/fonts/fontGot.ttf");
+  font-family: 'font-got';
+  src: url('./assets/fonts/fontGot.ttf');
 }
 
 /* Reset CSS */
@@ -22,15 +22,30 @@
   box-sizing: border-box;
 }
 
+/* Standardize fonts */
 
+body {
+  font-family: "font-standard";
+}
+/* body::-webkit-scrollbar {
+  width: 0 !important;
+}
+body {
+  -ms-overflow-style: none;
+}
+body {
+  overflow: -moz-scrollbars-none;
+} */
 body{
-  font-family: 'font-standard';
+  scrollbar-width: none;
 }
 
-h1,h2,h3{
+
+h1,
+h2,
+h3 {
   font-family: "font-got";
 }
-
 
 /* Set CSS variables */
 
@@ -63,3 +78,12 @@ h1,h2,h3{
   --color-summer-hover-desktop-header: #f3f0d7;
 }
 
+
+.footerM,.headerM,.navbar{
+  box-shadow: 0px 0px 16px var(--color-font-dark);
+  position:fixed;
+  z-index: 10000000;
+}
+.footerM{
+  bottom:0;
+}
