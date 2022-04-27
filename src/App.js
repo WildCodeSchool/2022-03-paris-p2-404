@@ -12,15 +12,13 @@ function App() {
   
   return (
     <div className="App">
-    <MobileHeader />
-     <MobileFooter/>
-      <NotifUserList />
-      <Navbar />
-      Bienvenue groupe 404 ! HOOO
-      <SearchBar/>
-      <CommentList/>
       <Routes>
-        <Route/>
+        <Route path="/" element={< HomePage />} />
+        <Route path="/login" element={< LoginPage />} />
+        <Route path="/users/:id" element={< ProfileInfoCard />} />
+        <Route path="/myprofile" element={""} />
+        <Route path="/latest" element={< NotifUserList />} />
+        <Route path="/map" element={<Map />} />
       </Routes>
     </div>
   );
