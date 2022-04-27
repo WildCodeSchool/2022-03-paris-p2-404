@@ -5,6 +5,7 @@ import ProfileName from "./ProfileName";
 import ProfileQuote from "./ProfileQuote";
 import Navbar from "./Navbar";
 import { CoverPictures } from "./coverPictures/CoverPictures";
+import Profile_Interact_Button from "./Profile_Interact_Button";
 
 function ProfileInfoCard() {
     const [profiles, setProfiles] = useState({});
@@ -23,6 +24,7 @@ console.log(profiles);
           <Navbar />
           <CoverPictures profiles={profiles} />
           <ProfilePicture profiles={profiles}/>
+          <Profile_Interact_Button />
           <ProfileName profiles = {profiles} />
           <ProfileQuote profiles = {profiles} />
         </div>
