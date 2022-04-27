@@ -6,21 +6,16 @@ import NotifUserList from "./components/NotifUserList";
 import CommentList from "./components/comments/CommentList";
 import Navbar from "./components/Navbar";
 import DropdownsDesktop from "./components/DropdownsDesktop";
+import { HomePage } from "./pages/HomePage";
 
 
 function App() {
   
   return (
-    <div className="App">
-    <MobileHeader />
-     <MobileFooter/>
-      <NotifUserList />
-      <Navbar />
-      Bienvenue groupe 404 ! HOOO
-      <SearchBar/>
-      <CommentList/>
+    <div className="App -z-50">
+    
       <Routes>
-        <Route/>
+        <Route path="/" element={<HomePage/>}/>
       </Routes>
     </div>
   );

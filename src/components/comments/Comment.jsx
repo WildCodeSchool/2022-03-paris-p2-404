@@ -28,7 +28,8 @@ export const Comment = ({ comments, completeComments }) => {
             <img
               src={characters[2].imageUrl}
               alt="#"
-              class="rounded-full w-12 h-auto "
+              class="rounded-full w-12 h-auto
+       "
             />
           </div>
           <div>
