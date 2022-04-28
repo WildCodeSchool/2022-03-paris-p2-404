@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import MobileHeader from "./components/MobileHeader";
 import ProfileInfoCard from "./components/ProfileInfoCard";
 import MobileFooter from "./components/MobileFooter";
 import SearchBar from "./components/SearchBar/SearchBar";
