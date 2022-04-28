@@ -7,12 +7,7 @@ import Navbar from "./Navbar";
 import { CoverPictures } from "./coverPictures/CoverPictures";
 import Profile_Interact_Button from "./Profile_Interact_Button";
 import { UserPost } from "./UserPost";
-
-function populatePosts() {
-    for (let i=0; i<10; i++) {
-        return <UserPost />
-    }
-};
+import throne from "../assets/icons/throne.png"
 
 function ProfileInfoCard() {
     const [profiles, setProfiles] = useState({});
@@ -29,7 +24,7 @@ function ProfileInfoCard() {
     return (
         <div>
             <Navbar />
-            <div className="flex flex-col items-center ">
+            <div className="profilecontent flex flex-col items-center ">
                 <div className="relative flex flex-col items-center">
                     <CoverPictures profiles={profiles} />
                     <div className="absolute -bottom-24">
@@ -44,13 +39,18 @@ function ProfileInfoCard() {
                         </div>
                     </div>
                 </div>
-                <div>
-
+                <div className="border-2 rounded-md p-2 customshadow">
                     <ProfileName profiles={profiles} />
                     <ProfileQuote profiles={profiles} />
                 </div>
-                <div>
-                    {populatePosts()}
+                <div className="w-4/6">
+                    <div>
+                      <div className="flex">
+                        <img src={throne} alt="throne icon" className="w-16 h-16"/>
+                        <h2 className="p-6">Latest Activity :</h2>
+                      </div>
+                      {Array.apply(null, {length: (Math.random()*30)}).map(item => <UserPost />)}
+                    </div>
                 </div>
             </div>
         </div>
