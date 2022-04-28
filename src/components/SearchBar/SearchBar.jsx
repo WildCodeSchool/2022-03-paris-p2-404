@@ -2,18 +2,18 @@ import SearchIcon from '@mui/icons-material/Search';
 import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export const SearchBar = () => {
+  const [characters, setCharacters] = useState([]);
+  const url = 'https://thronesapi.com/api/v2/Characters';
 
-    const [characters, setCharacters] = useState([]);
-    const url = 'https://thronesapi.com/api/v2/Characters';
-  
-    useEffect(() => {
-      axios
-        .get(url)
-        .then((res) => res.data)
-        .then((data) => setCharacters(data));
-    }, []);
+  useEffect(() => {
+    axios
+      .get(url)
+      .then((res) => res.data)
+      .then((data) => setCharacters(data));
+  }, []);
 
   const [value, setValue] = useState('');
 
@@ -22,7 +22,7 @@ export const SearchBar = () => {
   };
 
   const onSearch = (searchTerm) => {
-      setValue(searchTerm);
+    setValue(searchTerm);
     //api to fetch search result
     console.log('search', searchTerm);
   };
@@ -38,27 +38,39 @@ export const SearchBar = () => {
           class="border-0 w-full rounded-2xl px-2 py-1  shadow-inner shadow-color-winter-header "
         />
 
-        <button
+        <span
           className="search-button text-color-winter-footer absolute h-auto right-1 font-light rounded-full px-2 my-1  border-black hover:text-color-winter-header  "
-          onClick={() => onSearch(value)} 
+          // onClick={() => onSearch(value)}
+          // button disable to make search simpler and easier. 
+          //run search on suggestion click
         >
-          <SearchIcon/>
-        </button>
+          <SearchIcon />
+        </span>
       </div>
       <div className="dropdown my-1 rounded-lg bg-slate-300  border-black  empty:border-0 shadow-md shadow-color-font-dark">
         {characters
-        .filter((character) => {
+          .filter((character) => {
             const searchCharacter = value.toLocaleLowerCase();
             const fullName = character.fullName.toLowerCase();
 
-            return searchCharacter && fullName.includes(searchCharacter) && fullName !== searchCharacter;
-        })
-        .slice(0, 10) // limit to 10 results
-        .map((character, index) => (
-        <div onClick={()=>onSearch(character.fullName)} key={index} 
-        className="dropdown-row rounded-lg p-1 cursor-pointer  hover:bg-color-winter-header hover:text-color-font-light">
-            {character.fullName}
-        </div>))}
+            return (
+              searchCharacter &&
+              fullName.includes(searchCharacter) &&
+              fullName !== searchCharacter
+            );
+          })
+          .slice(0, 10) // limit to 10 results
+          .map((character, index) => (
+            <Link to={`/users/${character.id}`} key={index}>
+            <div
+              onClick={() => onSearch(character.fullName)}
+              key={index}
+              className="dropdown-row rounded-lg p-1 cursor-pointer  hover:bg-color-winter-header hover:text-color-font-light"
+            >
+              {character.fullName}
+            </div>
+            </Link>
+          ))}
       </div>
     </div>
   );
