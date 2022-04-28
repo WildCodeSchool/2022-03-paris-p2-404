@@ -8,16 +8,19 @@ import { CoverPictures } from "./coverPictures/CoverPictures";
 import Profile_Interact_Button from "./Profile_Interact_Button";
 import { UserPost } from "./UserPost";
 import throne from "../assets/icons/throne.png"
+import { useParams } from "react-router-dom";
 
 function ProfileInfoCard() {
     const [profiles, setProfiles] = useState({});
 
+    let { id } = useParams();
+
     useEffect(() => {
         axios
-            .get("https://thronesapi.com/api/v2/Characters/0")
+            .get("https://thronesapi.com/api/v2/Characters/" + id)
             .then(res => res.data)
             .then(data => setProfiles(data));
-    }, []);
+    }, [id]);
 
     console.log(profiles);
 
