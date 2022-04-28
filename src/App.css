@@ -5,13 +5,13 @@
 /* Import fonts */
 
 @font-face {
-  font-family: 'font-standard';
-  src: url('./assets/fonts/fontRobotoSlab.ttf');
+  font-family: "font-standard";
+  src: url("./assets/fonts/fontRobotoSlab.ttf");
 }
 
 @font-face {
-  font-family: 'font-got';
-  src: url('./assets/fonts/fontGot.ttf');
+  font-family: "font-got";
+  src: url("./assets/fonts/fontGot.ttf");
 }
 
 /* Reset CSS */
@@ -36,10 +36,9 @@ body {
 body {
   overflow: -moz-scrollbars-none;
 } */
-body{
+body {
   scrollbar-width: none;
 }
-
 
 h1,
 h2,
@@ -57,7 +56,7 @@ h3 {
 
   /* Winter mode  */
   --color-winter-primary: #9fadba;
-  --color-winter-header: #597388;
+  /* --color-winter-header: #597388; */
   --color-winter-footer: #c4c4c4;
   --color-winter-background: #e5e7eb;
   --color-winter-button: #88b1d7;
@@ -68,7 +67,7 @@ h3 {
 
   /* Summer mode */
   --color-summer-primary: #f3f0d7;
-  --color-summer-header: #d9a66d;
+  /* --color-summer-header: #d9a66d; */
   --color-summer-footer: #d9a66d;
   --color-summer-background: #e0c097;
   --color-summer-button: #ecb0b0;
@@ -78,12 +77,25 @@ h3 {
   --color-summer-hover-desktop-header: #f3f0d7;
 }
 
+/* Winter mode */
+h1.winter,
+h2.winter {
+  --color-winter-header: #597388;
+}
 
-.footerM,.headerM,.navbar{
+/* Summer mode */
+h1.summer,
+h2.summer {
+  --color-summer-header: #d9a66d;
+}
+
+.footerM,
+.headerM,
+.navbar {
   box-shadow: 0px 0px 16px var(--color-font-dark);
-  position:fixed;
+  position: fixed;
   z-index: 10000000;
 }
-.footerM{
-  bottom:0;
+.footerM {
+  bottom: 0;
 }
