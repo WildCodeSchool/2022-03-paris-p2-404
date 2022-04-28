@@ -8,7 +8,8 @@ export const PostPicture = ({ character }) => {
         src={character.imageUrl}
         alt={character.fullName}
         key={character.fullName}
-        className="rounded-full h-20 w-20 object-cover border border-black
+        className="rounded-full h-20 w-20 object-cover 
+        border border-black shadow-sm shadow-color-font-dark
         hover:h-24 hover:w-24 hover:transition-all hover:shadow-lg hover:shadow-color-font-dark"
       />
     </div>
