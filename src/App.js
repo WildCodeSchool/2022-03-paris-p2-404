@@ -13,10 +13,13 @@ function App() {
   
   return (
     <div className="App">
-    <MobileHeader />
-  
       <Routes>
-        <Route path="/contact-form"/>
+        <Route path="/" element={< HomePage />} />
+        {/* <Route path="/login" element={< LoginPage />} /> */}
+        <Route path="/users/:id" element={< ProfileInfoCard />} />
+        <Route path="/myprofile" element={""} />
+        <Route path="/latest" element={< NotifUserList />} />
+        {/* <Route path="/map" element={<Map />} /> */}
       </Routes>
     </div>
   );

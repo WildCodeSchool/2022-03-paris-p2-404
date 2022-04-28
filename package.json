@@ -13,8 +13,11 @@
     "axios": "^0.26.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-player": "^2.10.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "video-react": "^0.15.0",
     "reactjs-popup": "^2.0.5",
     "web-vitals": "^2.1.4"
   },
