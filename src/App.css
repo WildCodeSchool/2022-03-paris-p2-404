@@ -87,3 +87,10 @@ h3 {
 .footerM{
   bottom:0;
 }
+.profilecontent {
+  position: absolute;
+  top: 8.3%;
+}
+.customshadow {
+  box-shadow: 0px 0px 16px var(--color-font-dark);
+}

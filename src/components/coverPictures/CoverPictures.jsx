@@ -1,9 +1,14 @@
 import React from 'react';
 
-export const CoverPictures = ({ character }) => {
+export const CoverPictures = (props) => {
+  
+  console.log(props);
+  const { family } = props.profiles;
+  console.log(family);
+
   let cover;
 
-  switch (character.family) {
+  switch (family) {
     case 'House Stark' || 'Stark':
       cover = [
         'https://wallpapercave.com/wp/wp3090365.jpg',
@@ -153,7 +158,7 @@ export const CoverPictures = ({ character }) => {
 
   return (
     <div>
-      <img alt="cover" src={cover[Math.floor(Math.random() * 4)]} />
+      <img className='w-screen max-h-96 object-cover' alt="cover" src={cover[Math.floor(Math.random() * 4)]} />
     </div>
   );
 };
