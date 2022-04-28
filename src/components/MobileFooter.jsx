@@ -41,19 +41,20 @@ function MobileFooter() {
   };
 
     return (
-        <div className="font-[font-got] text-color-heart-icon bg-color-winter-footer
+        <div className="footerM text-color-heart-icon bg-color-winter-footer
         h-20 w-full flex flex-row justify-around">
-          <div className={`flex w-1/4 justify-center items-center ${isClicked1 ? "bg-color-winter-hover-mobile-footer" : ""}`}>
-              <img onClick={handleClick1} className="h-3/4" src={compassLogo} alt="compass icon" />
+        
+          <div onClick={handleClick1}className={`flex w-1/4 justify-center items-center ${isClicked1 ? " bg-color-winter-hover-mobile-footer" : ""}`}>
+              <img  className="h-3/4" src={compassLogo} alt="compass icon" />
           </div>
-          <div className={`flex w-1/4 justify-center items-center ${isClicked2 ? "bg-color-winter-hover-mobile-footer" : ""}`}>
-              <img onClick={handleClick2} className="h-3/4" src={throneLogo} alt="throne icon" />
+          <div onClick={handleClick2} className={`flex w-1/4 justify-center items-center ${isClicked2 ? "bg-color-winter-hover-mobile-footer" : ""}`}>
+              <img  className="h-3/4" src={throneLogo} alt="throne icon" />
           </div>
-          <div  className={`flex w-1/4 justify-center items-center ${isClicked3 ? "bg-color-winter-hover-mobile-footer" : ""}`}>
-              <img onClick={handleClick3} className="h-3/4" src={trumpetLogo} alt="trumpet icon" />
+          <div onClick={handleClick3} className={`flex w-1/4 justify-center items-center ${isClicked3 ? "bg-color-winter-hover-mobile-footer" : ""}`}>
+              <img  className="h-3/4" src={trumpetLogo} alt="trumpet icon" />
           </div>
-          <div className={`flex w-1/4 justify-center items-center ${isClicked4 ? "bg-color-winter-hover-mobile-footer" : ""}`}>
-              <img onClick={handleClick4} className="h-3/4" src={queenLogo} alt="queen icon" />
+          <div onClick={handleClick4} className={`flex w-1/4 justify-center items-center  ${isClicked4 ? "bg-color-winter-hover-mobile-footer" : ""}`}>
+              <img  className="h-3/4" src={queenLogo} alt="queen icon" />
           </div> 
         </div>
     );

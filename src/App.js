@@ -1,12 +1,14 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import MobileHeader from "./components/MobileHeader";
+import ProfileInfoCard from "./components/ProfileInfoCard";
 import MobileFooter from "./components/MobileFooter";
 import SearchBar from "./components/SearchBar/SearchBar";
 import NotifUserList from "./components/NotifUserList";
 import CommentList from "./components/comments/CommentList";
 import Navbar from "./components/Navbar";
 import DropdownsDesktop from "./components/DropdownsDesktop";
+import { HomePage } from "./pages/HomePage";
 
 
 function App() {
