@@ -9,6 +9,8 @@ import CommentList from "./components/comments/CommentList";
 import Navbar from "./components/Navbar";
 import DropdownsDesktop from "./components/DropdownsDesktop";
 import { HomePage } from "./pages/HomePage";
+import { DesktopFooter } from "./components/DesktopFooter";
+import { LoginPage } from "./pages/LoginPage";
 
 
 function App() {
@@ -17,7 +19,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={< HomePage />} />
-        {/* <Route path="/login" element={< LoginPage />} /> */}
+        <Route path="/login" element={< LoginPage />} />
         <Route path="/users/:id" element={< ProfileInfoCard />} />
         <Route path="/myprofile" element={""} />
         <Route path="/latest" element={< NotifUserList />} />

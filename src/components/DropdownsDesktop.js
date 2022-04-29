@@ -1,6 +1,7 @@
 import React from 'react';
 import JonSnowPic from '../assets/img/jon_snow_pic.jpeg';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 /* Made a dropdowns because burger menu are used for mobile only */
@@ -39,7 +40,7 @@ const handleVisible = () => {
     <a href="#" className="text-black block px-4 py-2 text-sm hover:bg-color-winter-header hover:text-color-font-light rounded-lg" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
     <button type="submit" className="text-black block w-full text-left px-4 py-2 text-sm hover:bg-color-winter-header hover:text-color-font-light rounded-lg" role="menuitem" tabindex="-1" id="menu-item-1">Winter Mode</button>
     <button type="submit" className="text-black block w-full text-left px-4 py-2 text-sm hover:bg-color-winter-header hover:text-color-font-light rounded-lg" role="menuitem" tabindex="-1" id="menu-item-2">Summer Mode</button>
-    <button type="submit" className="text-black block w-full text-left px-4 py-2 text-sm hover:bg-color-winter-header hover:text-color-font-light rounded-lg" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+    <Link to="/login"><button type="submit" className="text-black block w-full text-left px-4 py-2 text-sm hover:bg-color-winter-header hover:text-color-font-light rounded-lg" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button></Link>
     </div>
   </div>}
 </div>

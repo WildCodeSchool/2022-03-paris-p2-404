@@ -1,4 +1,5 @@
 import snowstorm from "../assets/videos/snowstorm.mp4";
+import { Link } from "react-router-dom";
 
 export const LoginPage = () => {
   return (
@@ -55,6 +56,7 @@ export const LoginPage = () => {
           />
 
           <div className="flex flex-col items-center gap-y-4">
+            <Link to="/">
             <button
               className="                
                 py-2 xl:py-4 2xl:py-6 px-3 2xl:px-5 mb-2 mt-10 lg:mt-10 xl:mt-16
@@ -63,6 +65,7 @@ export const LoginPage = () => {
             >
               LOG IN
             </button>
+            </Link>
 
             <div className="font-[font-standard]">
               or create your account <span className="underline">here</span>

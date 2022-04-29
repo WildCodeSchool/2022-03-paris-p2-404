@@ -64,19 +64,19 @@ const quotes = [
         "sentence": "We don't have time for all this. The Night King has your dragon. He's one of them now. The Wall has fallen. The dead march south."
       },
       {
-        "character": "Jaime",
+        "character": "Jamie",
         "sentence": "The things I do for love."
       },
       {
-        "character": "Jaime",
+        "character": "Jamie",
         "sentence": "Fighting bravely for a losing cause is admirable. Fighting for a winning cause is far more rewarding."
       },
       {
-        "character": "Jaime",
+        "character": "Jamie",
         "sentence": "Three victories don't make you a conqueror."
       },
       {
-        "character": "Jaime",
+        "character": "Jamie",
         "sentence": "By what right does the wolf judge the lion?"
       },
       {
@@ -169,7 +169,7 @@ const quotes = [
       },
       {
         "character": "Cersei",
-        "sentence": "I want our baby to live. Don't let me die, Jaime. Please don't let me die."
+        "sentence": "I want our baby to live. Don't let me die, Jamie. Please don't let me die."
       },
       {
         "character": "Cersei",
@@ -286,6 +286,10 @@ const quotes = [
       {
         "character": "Baelish",
         "sentence": "It doesn’t matter what we want. Once we get it, then we want something else."
+      },
+      {
+        "character": "Wylis",
+        "sentence": "Hodoooor !..."
       }
     ];
     export {quotes};
