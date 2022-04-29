@@ -1,16 +1,27 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const NotifSamwellCard = ({samwell, date}) => {
+const NotifSamwellCard = ({ samwell, date }) => {
   return (
-<div className=''>
-    <ul className='mx-2 shadow-color-font-dark shadow-md rounded-2xl'>
-        <li className='flex flex-row justify-between items-center bg-color-winter-primary border-solid border rounded-2xl border-black	'> 
-            <img src={samwell.imageUrl} alt={samwell.firstName} className="rounded-full object-cover h-12 w-12 m-2" />
-             <p ><span className='font-bold'>{samwell.firstName}</span> send you a friend request </p> <p className='mx-4'>{date}</p>
+    <div className="">
+      <ul className="mx-2 shadow-color-font-dark shadow-md rounded-2xl">
+        <li className="flex flex-row justify-between items-center bg-color-winter-primary border-solid border rounded-2xl border-black	">
+        <Link to={`/users/1`}>
+          <img
+            src={samwell.imageUrl}
+            alt={samwell.firstName}
+            className="rounded-full object-cover h-12 w-12 m-2"
+          />
+          </Link>
+          <p>
+            <span className="font-bold">{samwell.firstName}</span> send you a
+            friend request{' '}
+          </p>{' '}
+          <p className="mx-4">{date}</p>
         </li>
-    </ul>
-</div>
-  )
-}
+      </ul>
+    </div>
+  );
+};
 
-export default NotifSamwellCard
+export default NotifSamwellCard;
