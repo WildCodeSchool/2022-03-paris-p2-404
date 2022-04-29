@@ -23,7 +23,6 @@ function App() {
         <Route path="/latest" element={< NotifUserList />} />
         {/* <Route path="/map" element={<Map />} /> */}
       </Routes>
-      <MobileFooter />
     </div>
   );
 }

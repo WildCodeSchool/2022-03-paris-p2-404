@@ -21,7 +21,7 @@ const handleVisible = () => {
   <div className=" right-0 mt-2 w-56 rounded-md shadow-lg
    bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" 
   role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-    <div className="py-1" role="none">
+    <div className="py-1 bg-white" role="none">
     <a href="#" className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-50" role="menuitem" tabindex="-1" id="menu-item-0">Time to duel</a>
     <button type="submit" className="text-gray-700 block w-full text-left px-4 py-2 text-sm hover:bg-gray-50" role="menuitem" tabindex="-1" id="menu-item-1">Marry me</button>
     <button type="submit" className="text-gray-700 block w-full text-left px-4 py-2 text-sm hover:bg-gray-50" role="menuitem" tabindex="-1" id="menu-item-2">Be my friend</button>

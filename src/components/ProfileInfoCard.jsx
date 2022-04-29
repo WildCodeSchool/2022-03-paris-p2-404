@@ -42,16 +42,12 @@ function ProfileInfoCard() {
                         </div>
                     </div>
                 </div>
-                <div className="border-2 rounded-md p-2 customshadow">
+                <div className="flex flex-col items-center w-screen mb-8 border-2 p-2 customshadow">
                     <ProfileName profiles={profiles} />
                     <ProfileQuote profiles={profiles} />
                 </div>
                 <div className="w-4/6">
                     <div>
-                      <div className="flex">
-                        <img src={throne} alt="throne icon" className="w-16 h-16"/>
-                        <h2 className="p-6">Latest Activity :</h2>
-                      </div>
                       {Array.apply(null, {length: (Math.random()*30)}).map(item => <UserPost />)}
                     </div>
                 </div>

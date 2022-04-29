@@ -8,7 +8,7 @@ function ProfileName(props) {
   const {id, fullName, title, family} = props.profiles;
   
   return (
-    <div>
+    <div className='flex flex-col items-center'>
       <div className="flex ">
         <PersonIcon></PersonIcon>
         <h2>{fullName}</h2>
