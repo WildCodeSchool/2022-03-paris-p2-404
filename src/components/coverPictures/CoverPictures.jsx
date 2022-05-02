@@ -105,7 +105,7 @@ export const CoverPictures = (props) => {
         'https://i.pinimg.com/originals/a4/d4/90/a4d490c5251614cfffe4b7b0a3ff2da2.jpg',
       ];
       break;
-      break;
+      
     case 'Greyjoy':
       cover = [
         'https://fr.web.img3.acsta.net/r_1280_720/newsv7/19/04/08/12/08/38703180.jpg',
