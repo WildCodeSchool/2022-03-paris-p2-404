@@ -11,6 +11,7 @@ import DropdownsDesktop from "./components/DropdownsDesktop";
 import { HomePage } from "./pages/HomePage";
 import { DesktopFooter } from "./components/DesktopFooter";
 import { LoginPage } from "./pages/LoginPage";
+import NotificationMobilePage from "./components/pages/NotificationMobilePage";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Route path="/login" element={< LoginPage />} />
         <Route path="/users/:id" element={< ProfileInfoCard />} />
         <Route path="/myprofile" element={""} />
-        <Route path="/latest" element={< NotifUserList />} />
+        <Route path="/latest" element={< NotificationMobilePage />} />
         {/* <Route path="/map" element={<Map />} /> */}
       </Routes>
     </div>
