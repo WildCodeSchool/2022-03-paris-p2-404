@@ -51,7 +51,7 @@ export const LikeCounter = () => {
       )}
 
       {/* Display counter */}
-      <div className="font-[font-standard] text-base"><span class='font-bold'>{likeCount}</span>{likedMessage}</div>
+      <div className="font-[font-standard] text-base"><span className='font-bold'>{likeCount}</span>{likedMessage}</div>
     </div>
   );
 };

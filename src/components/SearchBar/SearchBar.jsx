@@ -35,7 +35,7 @@ export const SearchBar = () => {
           value={value}
           placeholder="Search character..."
           onChange={onChange}
-          class="border-0 w-full rounded-2xl px-2 py-1  shadow-inner shadow-color-winter-header "
+          className="border-0 w-full rounded-2xl px-2 py-1  shadow-inner shadow-color-winter-header "
         />
 
         <span
