@@ -2,7 +2,6 @@ import compassLogo from "../assets/icons/compass.png";
 import throneLogo from "../assets/icons/throne.png";
 import trumpetLogo from "../assets/icons/trumpet.png";
 import queenLogo from "../assets/icons/queen.png";
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function MobileFooter() {
