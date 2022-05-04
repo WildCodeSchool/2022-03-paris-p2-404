@@ -12,6 +12,8 @@ import { useParams } from "react-router-dom";
 
 function ProfileInfoCard() {
     const [profiles, setProfiles] = useState({});
+    const [quotes, setQuotes] = useState({});
+    
 
     let { id } = useParams();
 
@@ -22,7 +24,14 @@ function ProfileInfoCard() {
             .then(data => setProfiles(data));
     }, [id]);
 
-    console.log(profiles);
+    useEffect(() => {
+        axios
+            .get(`http://localhost:8000/api/quotes/${id}`)
+            .then(res => res.data)
+            .then(data => setQuotes(data));
+      }, [id]);
+
+
 
     return (
         <div>
@@ -44,7 +53,7 @@ function ProfileInfoCard() {
                 </div>
                 <div className="flex flex-col items-center w-screen mb-8 border-2 p-2 customshadow">
                     <ProfileName profiles={profiles} />
-                    <ProfileQuote profiles={profiles} />
+                    <ProfileQuote quotes={quotes} />
                 </div>
                 <div className="w-4/6">
                     <div>

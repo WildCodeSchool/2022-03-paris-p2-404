@@ -7,7 +7,6 @@ function ProfileName(props) {
 
   const {id, full_name: fullName, title, family} = props.profiles;
   
-  console.log(props.profiles);
 
   return (
     <div className='flex flex-col items-center'>

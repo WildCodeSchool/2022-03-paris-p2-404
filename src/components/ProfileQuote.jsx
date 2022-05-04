@@ -1,23 +1,35 @@
-import React from 'react'
-import { quotes } from './Quotes';
+import React, { useEffect, useState } from 'react'
 
-function ProfileQuote(props) {
+function ProfileQuote({ quotes }) {
+  const [random, setRandom] = useState()
 
-const { firstName } = props.profiles;
-console.log(firstName);
+  const myRandomNumber = () => {
+    let randomChoose = parseInt(Math.floor(Math.random() * (quotes.length)));
+        setRandom(randomChoose)
+    }
 
-const randomChoose = Math.random();
+  useEffect(() => {
+      myRandomNumber();
+  }, [random])
+
+console.log(quotes)
+console.log(random)
+// console.log(quotes[random].sentence)
+
+// console.log(quotes)
+// console.log(randomChoose)
+// console.log(char)
+
 
   return (
     <div className='p-2'>
-      {quotes.filter((item) => {
-        return item.character === firstName;
-      }
-      ).filter((item, index, array) => {
-        return index === Math.floor((randomChoose*(array.length)));
-      }).map(quote => <p key={quote.sentence}>{`"${quote.sentence}"`}</p>)}
+      {/* {quotes.filter((item, index, array) => {
+        return index === number;
+      }).map(quote => <p key={quote.sentence}>{`"${quote.sentence}"`}</p>)} */}
+     <p>{}</p>
     </div>
   )
+
 };
 
 export default ProfileQuote;

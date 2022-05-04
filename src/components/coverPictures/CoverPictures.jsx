@@ -2,9 +2,7 @@ import React from 'react';
 
 export const CoverPictures = (props) => {
   
-  console.log(props);
   const { family } = props.profiles;
-  console.log(family);
 
   let cover;
 
