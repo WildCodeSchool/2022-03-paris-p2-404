@@ -10,7 +10,7 @@ const handleVisible = () => {
 <div className="flex ml-5" >
 <div className=" inline-block">
   <div>
-    <button type="button" className="bg-color-winter-button inline-flex w-27 h-8 rounded-full border border-gray-300 shadow-md  bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:{color-winter-primary}" id="menu-button" aria-expanded="true" aria-haspopup="true" 
+    <button type="button" className="bg-color-winter-button inline-flex w-27 h-8 rounded-full border border-gray-300 shadow-md  bg-white text-sm font-medium text-gray-700 hover:bg-gray-50  focus:{color-winter-primary}" id="menu-button"  
     onClick={handleVisible}> <p className='ml-2 mt-1'>Interact with me</p>
       {/* <svg className="mt-1 mr-1 ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />

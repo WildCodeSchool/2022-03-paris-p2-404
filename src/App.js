@@ -9,6 +9,7 @@ import CommentList from "./components/comments/CommentList";
 import Navbar from "./components/Navbar";
 import DropdownsDesktop from "./components/DropdownsDesktop";
 import { HomePage } from "./pages/HomePage";
+import {Map} from "./pages/Map";
 
 
 function App() {
@@ -21,10 +22,12 @@ function App() {
         <Route path="/users/:id" element={< ProfileInfoCard />} />
         <Route path="/myprofile" element={""} />
         <Route path="/latest" element={< NotifUserList />} />
-        {/* <Route path="/map" element={<Map />} /> */}
+        <Route path="/map" element={<Map />} />
+       
       </Routes>
     </div>
   );
 }
+
 
 export default App;

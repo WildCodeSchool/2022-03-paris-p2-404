@@ -22,9 +22,10 @@ export const Navbar = () => {
           <li className="mx-0 pr-10 pl-10 py-7 w-full h-full font-[font-got] hover:bg-color-winter-hover-desktop-header">
             <NavLink to="/">Home</NavLink>
           </li>
+          <NavLink to="/map">
           <li className="mx-0 pr-10 pl-10 py-7 w-full h-full font-[font-got] hover:bg-color-winter-hover-desktop-header">
             Map
-          </li>
+          </li></NavLink>
         </ul>
       </div>
       <div className='profilePictureDD absolute mx-4 right-0'>

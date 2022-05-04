@@ -63,8 +63,8 @@ h3 {
   --color-winter-button: #88b1d7;
 
   /* Winter mode on hover */
-  --color-winter-hover-mobile-footer: #9fadba;
-  --color-winter-hover-desktop-header: #9fadba;
+  --color-winter-hover-mobile-footer: #597388;
+  --color-winter-hover-desktop-header: #597388;
 
   /* Summer mode */
   --color-summer-primary: #f3f0d7;
@@ -84,6 +84,9 @@ h3 {
   position:fixed;
   z-index: 10000000;
 }
+.headerM{
+  top:0;
+}
 .footerM{
   bottom:0;
 }
@@ -93,4 +96,24 @@ h3 {
 }
 .customshadow {
   box-shadow: 0px 0px 16px var(--color-font-dark);
+}
+.ccustomshadow {
+  box-shadow: 1px 0px 16px var(--color-font-dark);
+}
+
+.mapContent{
+  background-image: url('./assets/img/oldpapermap.jpg');
+  box-shadow: inset 0px 0px 24px 8px var(--color-font-dark);
+
+}
+.unclicked{
+  transition: ease-in-out 2000ms;
+  translate: translateX(400px);
+  left:-6rem;
+
+}
+.clicked{
+  transition: ease-in-out 2000ms; 
+  translate: translateX(0px);
+  left:200px;
 }
