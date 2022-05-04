@@ -17,7 +17,7 @@ function ProfileInfoCard() {
 
     useEffect(() => {
         axios
-            .get("https://thronesapi.com/api/v2/Characters/" + id)
+            .get(`http://localhost:8000/api/users/${id}`)
             .then(res => res.data)
             .then(data => setProfiles(data));
     }, [id]);
