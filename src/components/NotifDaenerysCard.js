@@ -13,9 +13,9 @@ const NotifDaenerysCard = ({ daenerys, date }) => {
               className="rounded-full object-cover h-12 w-12 m-2"
             />
           </Link>
-          <p className="">
+          <p className="flex justify-center mx-5 text-center text-sm">
             {' '}
-            <span className="font-bold">{daenerys.firstName}</span> liked your
+            {daenerys.firstName} liked your
             profile photo
           </p>{' '}
           <p className="mx-4">{date}</p>

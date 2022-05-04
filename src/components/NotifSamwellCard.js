@@ -13,8 +13,8 @@ const NotifSamwellCard = ({ samwell, date }) => {
             className="rounded-full object-cover h-12 w-12 m-2"
           />
           </Link>
-          <p>
-            <span className="font-bold">{samwell.firstName}</span> send you a
+          <p className='flex justify-center mx-5 text-center text-sm '>
+            {samwell.firstName} sent you a
             friend request{' '}
           </p>{' '}
           <p className="mx-4">{date}</p>
