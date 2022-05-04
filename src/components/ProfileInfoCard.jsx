@@ -35,11 +35,12 @@ function ProfileInfoCard() {
                     </div>
                 </div>
                 <div className="flex w-screen">
-                    <div className="w-1/2"></div>
+                    <div className="w-1/2">
+                    <div className=" absolute flex my-4">
+                    <Profile_Interact_Button />
+                    </div>
+                    </div>
                     <div className="flex w-1/2 justify-center h-32">
-                        <div className="my-4">
-                            <Profile_Interact_Button />
-                        </div>
                     </div>
                 </div>
                 <div className="border-2 rounded-md p-2 customshadow">
