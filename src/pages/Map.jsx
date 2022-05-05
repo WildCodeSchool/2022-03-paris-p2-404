@@ -329,7 +329,7 @@ export const Map = () => {
 {isVisible9 && (
         <div className=" w-full h-full my-4 ">
           <div
-            className="fixed bottom-50 top-220 z-40 overflow-auto scrollbar-hide
+            className="fixed bottom-50 top-20 z-40 overflow-auto scrollbar-hide
             h-screen w-screen lg:w-2/6 
           bg-white ccustomshadow"
           >
