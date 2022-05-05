@@ -57,7 +57,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 type="text"
                 required
                 value={firstname}
-                onChange={setFirstname}
+                onChange={(e) => setFirstname(e.target.value)}
                 className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
                 py-1 lg:py-2  my-1 lg:my-2 
                 font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
@@ -69,7 +69,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 type="text"
                 required
                 value={lastname}
-                onChange={setLastname}
+                onChange={(e) => setLastname(e.target.value)}
                 className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
@@ -80,7 +80,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 placeholder="Title"
                 type="text"
                 value={title}
-                onChange={setTitle}
+                onChange={(e) => setTitle(e.target.value)}
                 className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
@@ -91,7 +91,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 placeholder="Family"
                 type="text"
                 value={family}
-                onChange={setFamily}
+                onChange={(e) => setFamily(e.target.value)}
                 className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
@@ -103,7 +103,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 type="text"
                 required
                 value={picture}
-                onChange={setPicture}
+                onChange={(e) => setPicture(e.target.value)}
                 className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-1 lg:py-2 my-1 lg:my-2 
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
@@ -115,7 +115,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 type="text"
                 required
                 value={email}
-                onChange={setEmail}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
@@ -127,7 +127,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 type="text"
                 required
                 value={password}
-                onChange={setPassword}
+                onChange={(e) => setPassword(e.target.value)}
                 className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
