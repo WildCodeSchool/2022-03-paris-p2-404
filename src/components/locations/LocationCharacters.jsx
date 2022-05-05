@@ -14,7 +14,6 @@ export const LocationCharacters = ({ characters }) => {
           alt="#"
         />
         <h3>{characters.fullName}</h3>
-        <div className='mr-4'><Profile_Interact_Button/></div>
       </div>
     </div>
   );

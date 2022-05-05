@@ -100,7 +100,6 @@ h3 {
 .active {
   background-color: #88b1d7;
 }
-
 .ccustomshadow {
   box-shadow: 1px 0px 16px var(--color-font-dark);
 }
