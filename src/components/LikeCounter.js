@@ -41,17 +41,17 @@ export const LikeCounter = () => {
       {!liked ? (
         <FavoriteBorderIcon
           onClick={handleClickIncrement}
-          className="text-color-heart-icon"
+          className="text-gray-500 cursor-pointer hover:text-color-heart-icon hover:scale-125 transition-all"
         ></FavoriteBorderIcon>
       ) : (
         <FavoriteIcon
           onClick={handleClickDecrement}
-          className="text-color-heart-icon"
+          className="text-color-heart-icon hover:text-gray-500"
         ></FavoriteIcon>
       )}
 
       {/* Display counter */}
-      <div className="font-[font-standard] text-base"><span class='font-bold'>{likeCount}</span>{likedMessage}</div>
+      <div className="font-[font-standard] text-base mx-1"><span class='font-bold'>{likeCount}</span>{likedMessage}</div>
     </div>
   );
 };
