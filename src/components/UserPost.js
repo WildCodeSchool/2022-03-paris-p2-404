@@ -18,7 +18,7 @@ export const UserPost = () => {
   // Fetch API. Get a random character data and store it into character state above
   useEffect(() => {
     axios
-      .get(`https://thronesapi.com/api/v2/Characters/${randomId}`)
+      .get(`http://localhost:8000/api/users/${randomId}`)
       .then((res) => res.data)
       .then((data) => setCharacter(data));
   }, []);
