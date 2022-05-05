@@ -1,6 +1,35 @@
 import CloseIcon from "@mui/icons-material/Close";
+import axios from "axios";
+import { useState } from "react";
 
 export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [title, setTitle] = useState("");
+  const [family, setFamily] = useState("");
+  const [picture, setPicture] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const data = {
+      firstname: firstname,
+      lastname: lastname,
+      title: title,
+      family: family,
+      picture: picture,
+      email: email,
+      password: password,
+    };
+
+    axios
+      .post("http://localhost:8000/api/users", data)
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <div>
       {isVisible && (
@@ -22,83 +51,99 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
               <br />-<br />
               Create your account
             </div>
-
-            <input
-              placeholder="Firstname"
-              type="text"
-              required
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+            <form>
+              <input
+                placeholder="Firstname"
+                type="text"
+                required
+                value={firstname}
+                onChange={setFirstname}
+                className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
                 py-1 lg:py-2  my-1 lg:my-2 
                 font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
-            />
+              />
 
-            <input
-              placeholder="Lastname"
-              type="text"
-              required
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              <input
+                placeholder="Lastname"
+                type="text"
+                required
+                value={lastname}
+                onChange={setLastname}
+                className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
-            />
+              />
 
-            <input
-              placeholder="Title"
-              type="text"
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              <input
+                placeholder="Title"
+                type="text"
+                value={title}
+                onChange={setTitle}
+                className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
-            />
+              />
 
-            <input
-              placeholder="Family"
-              type="text"
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              <input
+                placeholder="Family"
+                type="text"
+                value={family}
+                onChange={setFamily}
+                className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
-            />
+              />
 
-            <input
-              placeholder="Picture"
-              type="text"
-              required
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              <input
+                placeholder="Picture"
+                type="text"
+                required
+                value={picture}
+                onChange={setPicture}
+                className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-1 lg:py-2 my-1 lg:my-2 
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
-            />
+              />
 
-            <input
-              placeholder="Email"
-              type="text"
-              required
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              <input
+                placeholder="Email"
+                type="text"
+                required
+                value={email}
+                onChange={setEmail}
+                className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
-            />
+              />
 
-            <input
-              placeholder="Password"
-              type="text"
-              required
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              <input
+                placeholder="Password"
+                type="text"
+                required
+                value={password}
+                onChange={setPassword}
+                className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
-            />
+              />
 
-            <button
-              className="                
+              <button
+                onSubmit={handleSubmit}
+                className="                
                 py-2 xl:py-4 px-3 mt-10 mb-10
                 font-[font-got] border border-1 border-black bg-color-winter-button rounded-lg hover:bg-color-winter-header hover:text-color-font-light shadow-md shadow-color-font-dark hover:transition-shadow hover:shadow-sm hover:shadow-color-font-dark
               "
-            >
-              Create
-            </button>
+              >
+                Create
+              </button>
+            </form>
           </div>
         </div>
       )}
