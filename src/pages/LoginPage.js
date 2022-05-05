@@ -1,7 +1,12 @@
+import { useState } from "react";
 import snowstorm from "../assets/videos/snowstorm.mp4";
 import { Link } from "react-router-dom";
+import { CreateAccountForm } from "../components/CreateAccountForm";
 
 export const LoginPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const toggleVisible = () => setIsVisible(!isVisible);
+
   return (
     <div>
       <video
@@ -35,11 +40,9 @@ export const LoginPage = () => {
             placeholder="USERNAME"
             type="text"
             required
-            className="
-              text-center placeholder:text-center
-              w-4/5 md:w-11/12 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl 2xl:placeholder:text-4xl
-              py-2 my-2
-              font-[font-standard] border border-1 border-black bg-color-winter-button rounded-xl placeholder:text-gray-600 shadow-sm shadow-color-font-dark
+            className="w-4/5 md:w-11/12 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl 2xl:placeholder:text-4xl
+              py-2 2xl:py-4 placeholder:pl-3 my-2
+              font-[font-standard] border border-1 border-black bg-slate-200 rounded-xl placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
           />
 
@@ -47,11 +50,9 @@ export const LoginPage = () => {
             placeholder="PASSWORD"
             type="password"
             required
-            className="              
-              text-center placeholder:text-center
-              w-4/5 md:w-11/12 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl 2xl:placeholder:text-4xl
-              py-2 my-2
-              font-[font-standard] border border-1 border-black bg-color-winter-button rounded-xl placeholder:text-gray-600 shadow-sm shadow-color-font-dark
+            className="w-4/5 md:w-11/12 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl 2xl:placeholder:text-4xl
+              py-2 2xl:py-4 placeholder:pl-3 my-2
+              font-[font-standard] border border-1 border-black bg-slate-200 rounded-xl placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
           />
 
@@ -68,8 +69,18 @@ export const LoginPage = () => {
             </Link>
 
             <div className="font-[font-standard]">
-              or create your account <span className="underline">here</span>
+              or create your account{" "}
+              <span
+                className="underline cursor-pointer"
+                onClick={toggleVisible}
+              >
+                here
+              </span>
             </div>
+            <CreateAccountForm
+              isVisible={isVisible}
+              toggleVisible={toggleVisible}
+            />
           </div>
         </form>
       </div>

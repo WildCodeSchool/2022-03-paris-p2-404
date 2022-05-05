@@ -12,12 +12,14 @@ import { HomePage } from "./pages/HomePage";
 import { DesktopFooter } from "./components/DesktopFooter";
 import { LoginPage } from "./pages/LoginPage";
 import NotificationMobilePage from "./components/pages/NotificationMobilePage";
+import {Map} from "./pages/Map";
 
 
 function App() {
   
   return (
     <div className="App">
+      <MobileHeader />
       <Routes>
         <Route path="/" element={< HomePage />} />
         <Route path="/login" element={< LoginPage />} />
@@ -25,9 +27,12 @@ function App() {
         <Route path="/myprofile" element={""} />
         <Route path="/latest" element={< NotificationMobilePage />} />
         {/* <Route path="/map" element={<Map />} /> */}
+        <Route path="/map" element={<Map />} />
+       
       </Routes>
     </div>
   );
 }
+
 
 export default App;
