@@ -78,7 +78,7 @@ export const UserQuote = ({ character }) => {
         "The world is overflowing with horrible things, but they’re all a tray of cakes next to death";
       break;
     case "Wylis":
-      quote = "Hodor";
+      quote = "Hodoooor !...";
       break;
     default:
       quote = "Winter is coming!";

@@ -40,6 +40,21 @@ export const HomePage = () => {
             <UserPost />
             <UserPost />
             <UserPost />
+            <UserPost />
+            <UserPost />
+            <UserPost />
+            <UserPost />
+            <UserPost />
+            <UserPost />
+            <UserPost />
+            <UserPost />
+            <UserPost />
+            <UserPost />
+            <UserPost />
+            <UserPost />
+            <UserPost />
+            <UserPost />
+            <UserPost />
           </div>
         </div>
 
@@ -63,7 +78,6 @@ export const HomePage = () => {
       shadow:md shadow-color-font-dark'>
         <MobileFooter/>
         </div>
-   
     </div>
   );
 };

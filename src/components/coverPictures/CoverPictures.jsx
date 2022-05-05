@@ -9,7 +9,7 @@ export const CoverPictures = (props) => {
   let cover;
 
   switch (family) {
-    case 'House Stark' || 'Stark':
+    case 'Stark':
       cover = [
         'https://wallpapercave.com/wp/wp3090365.jpg',
         'https://wc.wallpaperuse.com/wallp/47-477669_s.jpg',
@@ -17,7 +17,15 @@ export const CoverPictures = (props) => {
         'https://wallpapercave.com/wp/wp3090370.jpg',
       ];
       break;
-    case 'House Lannister' || 'Lannister':
+      case 'House Stark':
+      cover = [
+        'https://wallpapercave.com/wp/wp3090365.jpg',
+        'https://wc.wallpaperuse.com/wallp/47-477669_s.jpg',
+        'https://cutewallpaper.org/22/winterfell-desktop-wallpapers/1263430829.jpg',
+        'https://wallpapercave.com/wp/wp3090370.jpg',
+      ];
+      break;
+    case 'House Lannister':
       cover = [
         'https://i.pinimg.com/originals/ea/a5/f5/eaa5f59352027bd68eca18e64052da82.jpg',
         'https://www.wallpapertip.com/wmimgs/239-2390311_the-regal-lion-house-lannister-4k-ultra-hd.jpg',
@@ -25,7 +33,15 @@ export const CoverPictures = (props) => {
         'https://d1e00ek4ebabms.cloudfront.net/production/1471f307-0868-4f98-b0e0-e7b0049898cd.jpg',
       ];
       break;
-    case 'House Targaryen' || 'Targaryen':
+      case 'Lannister':
+      cover = [
+        'https://i.pinimg.com/originals/ea/a5/f5/eaa5f59352027bd68eca18e64052da82.jpg',
+        'https://www.wallpapertip.com/wmimgs/239-2390311_the-regal-lion-house-lannister-4k-ultra-hd.jpg',
+        'https://www.lagardedenuit.com/wall/wp-content/uploads/2020/04/f1461c3fd9813d238f4baee21029dfcc-2100x1050.jpg',
+        'https://d1e00ek4ebabms.cloudfront.net/production/1471f307-0868-4f98-b0e0-e7b0049898cd.jpg',
+      ];
+      break;
+    case 'House Targaryen':
       cover = [
         'https://cdn.arstechnica.net/wp-content/uploads/2019/11/house-of-the-dragon-explainer-800x450.jpg',
         'https://i.pinimg.com/originals/cf/59/1a/cf591a582c200c696c10b1f612bd1512.jpg',
@@ -33,7 +49,23 @@ export const CoverPictures = (props) => {
         'https://fr.web.img6.acsta.net/newsv7/19/05/02/14/39/4661162.jpg',
       ];
       break;
-    case 'House Tarly' || 'Tarly':
+      case 'Targaryen':
+      cover = [
+        'https://cdn.arstechnica.net/wp-content/uploads/2019/11/house-of-the-dragon-explainer-800x450.jpg',
+        'https://i.pinimg.com/originals/cf/59/1a/cf591a582c200c696c10b1f612bd1512.jpg',
+        'https://fr.web.img5.acsta.net/newsv7/17/07/21/17/38/332373.jpg',
+        'https://fr.web.img6.acsta.net/newsv7/19/05/02/14/39/4661162.jpg',
+      ];
+      break;
+      case 'Targaryan':
+      cover = [
+        'https://cdn.arstechnica.net/wp-content/uploads/2019/11/house-of-the-dragon-explainer-800x450.jpg',
+        'https://i.pinimg.com/originals/cf/59/1a/cf591a582c200c696c10b1f612bd1512.jpg',
+        'https://fr.web.img5.acsta.net/newsv7/17/07/21/17/38/332373.jpg',
+        'https://fr.web.img6.acsta.net/newsv7/19/05/02/14/39/4661162.jpg',
+      ];
+      break;
+    case 'House Tarly':
       cover = [
         'https://i.pinimg.com/originals/5f/92/80/5f928015ca189277c92de209431f3977.jpg',
         'https://pbs.twimg.com/media/DG45fnAXYAArsJ_.jpg',
@@ -41,7 +73,15 @@ export const CoverPictures = (props) => {
         'https://i.pinimg.com/originals/5f/92/80/5f928015ca189277c92de209431f3977.jpg',
       ];
       break;
-    case 'House Baratheon' || 'Baratheon':
+      case 'Tarly':
+      cover = [
+        'https://i.pinimg.com/originals/5f/92/80/5f928015ca189277c92de209431f3977.jpg',
+        'https://pbs.twimg.com/media/DG45fnAXYAArsJ_.jpg',
+        'https://pbs.twimg.com/media/DG45fnAXYAArsJ_.jpg',
+        'https://i.pinimg.com/originals/5f/92/80/5f928015ca189277c92de209431f3977.jpg',
+      ];
+      break;
+    case 'House Baratheon':
       cover = [
         'https://i.ytimg.com/vi/mP6uip1Lmfc/maxresdefault.jpg',
         'https://i.pinimg.com/originals/f9/01/35/f90135a1bc7be268aec75aae18945672.jpg',
@@ -49,7 +89,15 @@ export const CoverPictures = (props) => {
         'https://tourisme.euskadi.eus/contenidos/informacion/turismo_got_landing/es_def/images/img-san-juan-de-gaztelugatxe.jpg',
       ];
       break;
-    case 'House Greyjoy' || 'Greyjoy':
+      case 'Baratheon':
+      cover = [
+        'https://i.ytimg.com/vi/mP6uip1Lmfc/maxresdefault.jpg',
+        'https://i.pinimg.com/originals/f9/01/35/f90135a1bc7be268aec75aae18945672.jpg',
+        'https://tourisme.euskadi.eus/contenidos/informacion/turismo_got_landing/es_def/images/img-san-juan-de-gaztelugatxe.jpg',
+        'https://tourisme.euskadi.eus/contenidos/informacion/turismo_got_landing/es_def/images/img-san-juan-de-gaztelugatxe.jpg',
+      ];
+      break;
+    case 'House Greyjoy':
       cover = [
         'https://fr.web.img3.acsta.net/r_1280_720/newsv7/19/04/08/12/08/38703180.jpg',
         'https://picadilist.com/wp-content/uploads/images/upload_gen/house-a-song-of-ice-and-fire-29965916-1920-1080.jpeg',
@@ -57,7 +105,16 @@ export const CoverPictures = (props) => {
         'https://i.pinimg.com/originals/a4/d4/90/a4d490c5251614cfffe4b7b0a3ff2da2.jpg',
       ];
       break;
-    case 'House Clegane' || 'Clegane':
+      break;
+    case 'Greyjoy':
+      cover = [
+        'https://fr.web.img3.acsta.net/r_1280_720/newsv7/19/04/08/12/08/38703180.jpg',
+        'https://picadilist.com/wp-content/uploads/images/upload_gen/house-a-song-of-ice-and-fire-29965916-1920-1080.jpeg',
+        'https://i.pinimg.com/originals/a4/d4/90/a4d490c5251614cfffe4b7b0a3ff2da2.jpg',
+        'https://i.pinimg.com/originals/a4/d4/90/a4d490c5251614cfffe4b7b0a3ff2da2.jpg',
+      ];
+      break;
+    case 'House Clegane':
       cover = [
         'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Bandera_de_Areatza.svg/1280px-Bandera_de_Areatza.svg.png',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Bandera_de_Areatza.svg/1280px-Bandera_de_Areatza.svg.png',
@@ -65,7 +122,15 @@ export const CoverPictures = (props) => {
         'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Bandera_de_Areatza.svg/1280px-Bandera_de_Areatza.svg.png',
       ];
       break;
-    case 'House Baelish' || 'Baelish':
+      case 'Clegane':
+      cover = [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Bandera_de_Areatza.svg/1280px-Bandera_de_Areatza.svg.png',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Bandera_de_Areatza.svg/1280px-Bandera_de_Areatza.svg.png',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Bandera_de_Areatza.svg/1280px-Bandera_de_Areatza.svg.png',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Bandera_de_Areatza.svg/1280px-Bandera_de_Areatza.svg.png',
+      ];
+      break;
+    case 'House Baelish':
       cover = [
         'https://wallpapercave.com/wp/wp2065566.jpg',
         'https://images2.minutemediacdn.com/image/fetch/c_fill,g_auto,f_auto,h_1080,w_1920/https%3A%2F%2Fwinteriscoming.net%2Ffiles%2F2019%2F05%2F1-806-TSCap-Jon-and-Davos-LL1.jpg',
@@ -73,7 +138,15 @@ export const CoverPictures = (props) => {
         'https://www.joyscribe.com/wp-content/uploads/2019/04/Game-of-Thrones-Aftermath.jpg',
       ];
       break;
-    case 'House Seaworth' || 'Seaworth':
+      case 'Baelish':
+      cover = [
+        'https://wallpapercave.com/wp/wp2065566.jpg',
+        'https://images2.minutemediacdn.com/image/fetch/c_fill,g_auto,f_auto,h_1080,w_1920/https%3A%2F%2Fwinteriscoming.net%2Ffiles%2F2019%2F05%2F1-806-TSCap-Jon-and-Davos-LL1.jpg',
+        'https://www.joyscribe.com/wp-content/uploads/2019/04/Game-of-Thrones-Aftermath.jpg',
+        'https://www.joyscribe.com/wp-content/uploads/2019/04/Game-of-Thrones-Aftermath.jpg',
+      ];
+      break;
+    case 'House Seaworth':
       cover = [
         'https://i.pinimg.com/originals/23/bd/a7/23bda7057435deb3d0c7d4a57367f894.jpg',
         'https://i.pinimg.com/originals/23/bd/a7/23bda7057435deb3d0c7d4a57367f894.jpg',
@@ -81,7 +154,23 @@ export const CoverPictures = (props) => {
         'https://i.pinimg.com/originals/23/bd/a7/23bda7057435deb3d0c7d4a57367f894.jpg',
       ];
       break;
-    case 'House Tyrell' || 'Tyrell':
+      case 'Seaworth':
+      cover = [
+        'https://i.pinimg.com/originals/23/bd/a7/23bda7057435deb3d0c7d4a57367f894.jpg',
+        'https://i.pinimg.com/originals/23/bd/a7/23bda7057435deb3d0c7d4a57367f894.jpg',
+        'https://i.pinimg.com/originals/23/bd/a7/23bda7057435deb3d0c7d4a57367f894.jpg',
+        'https://i.pinimg.com/originals/23/bd/a7/23bda7057435deb3d0c7d4a57367f894.jpg',
+      ];
+      break;
+    case 'House Tyrell':
+      cover = [
+        'https://www.wardensofthemidwest.com/wp-content/uploads/2016/03/Tyrell_Sigil.jpg',
+        'https://www.wardensofthemidwest.com/wp-content/uploads/2016/03/Tyrell_Sigil.jpg',
+        'https://modernfarmer.com/wp-content/uploads/2014/07/highgarden.jpg',
+        'https://modernfarmer.com/wp-content/uploads/2014/07/highgarden.jpg',
+      ];
+      break;
+      case 'Tyrell':
       cover = [
         'https://www.wardensofthemidwest.com/wp-content/uploads/2016/03/Tyrell_Sigil.jpg',
         'https://www.wardensofthemidwest.com/wp-content/uploads/2016/03/Tyrell_Sigil.jpg',

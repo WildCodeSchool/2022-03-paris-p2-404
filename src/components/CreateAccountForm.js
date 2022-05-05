@@ -8,7 +8,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
           <div
             className="
                 flex flex-col items-center
-                absolute inset-x-10 lg:inset-x-20 xl:inset-x-40 2xl:inset-x-60
+                absolute inset-x-10 lg:inset-x-20 xl:inset-x-40
                 bg-white rounded-lg
             "
           >
@@ -17,7 +17,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
               className="absolute top-0 right-0 cursor-pointer"
             />
 
-            <div className="mb-10 2xl:mb-20 mt-10 2xl:mt-20">
+            <div className="mb-10  mt-10">
               Connect with Westeros now
               <br />-<br />
               Create your account
@@ -27,8 +27,8 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
               placeholder="Firstname"
               type="text"
               required
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl 2xl:placeholder:text-4xl
-                py-1 lg:py-2 2xl:py-4 my-1 lg:my-2 2xl:my-4
+              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+                py-1 lg:py-2  my-1 lg:my-2 
                 font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
             />
@@ -37,8 +37,8 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
               placeholder="Lastname"
               type="text"
               required
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl 2xl:placeholder:text-4xl
-              py-1 lg:py-2 2xl:py-4 my-1 lg:my-2 2xl:my-4
+              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
             />
@@ -46,8 +46,8 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
             <input
               placeholder="Title"
               type="text"
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl 2xl:placeholder:text-4xl
-              py-1 lg:py-2 2xl:py-4 my-1 lg:my-2 2xl:my-4
+              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
             />
@@ -55,8 +55,8 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
             <input
               placeholder="Family"
               type="text"
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl 2xl:placeholder:text-4xl
-              py-1 lg:py-2 2xl:py-4 my-1 lg:my-2 2xl:my-4
+              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
             />
@@ -65,8 +65,8 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
               placeholder="Picture"
               type="text"
               required
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl 2xl:placeholder:text-4xl
-              py-1 lg:py-2 2xl:py-4 my-1 lg:my-2 2xl:my-4
+              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              py-1 lg:py-2 my-1 lg:my-2 
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
             />
@@ -75,8 +75,8 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
               placeholder="Email"
               type="text"
               required
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl 2xl:placeholder:text-4xl
-              py-1 lg:py-2 2xl:py-4 my-1 lg:my-2 2xl:my-4
+              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
             />
@@ -85,15 +85,15 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
               placeholder="Password"
               type="text"
               required
-              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl 2xl:placeholder:text-4xl
-              py-1 lg:py-2 2xl:py-4 my-1 lg:my-2 2xl:my-4
+              className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              py-1 lg:py-2 my-1 lg:my-2
               font-[font-standard] border border-1 border-black bg-slate-200 placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
             />
 
             <button
               className="                
-                py-2 xl:py-4 2xl:py-6 px-3 2xl:px-5 mt-10 2xl:mt-20 mb-10 2xl:mb-20
+                py-2 xl:py-4 px-3 mt-10 mb-10
                 font-[font-got] border border-1 border-black bg-color-winter-button rounded-lg hover:bg-color-winter-header hover:text-color-font-light shadow-md shadow-color-font-dark hover:transition-shadow hover:shadow-sm hover:shadow-color-font-dark
               "
             >

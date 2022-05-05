@@ -1,5 +1,6 @@
 import { useState } from "react";
 import snowstorm from "../assets/videos/snowstorm.mp4";
+import { Link } from "react-router-dom";
 import { CreateAccountForm } from "../components/CreateAccountForm";
 
 export const LoginPage = () => {
@@ -24,7 +25,7 @@ export const LoginPage = () => {
       <div
         className="
           flex flex-col items-center justify-center text-center md:absolute md:left-1/2
-          h-screen w-screen md:w-1/2 text-sm lg:text-lg xl:text-xl 2xl:text-4xl
+          h-screen w-screen md:w-1/2 text-sm lg:text-lg xl:text-xl 
           text-black md:bg-slate-300
         "
       >
@@ -39,8 +40,8 @@ export const LoginPage = () => {
             placeholder="USERNAME"
             type="text"
             required
-            className="w-4/5 md:w-11/12 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl 2xl:placeholder:text-4xl
-              py-2 2xl:py-4 placeholder:pl-3 my-2
+            className="w-4/5 md:w-11/12 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              py-2 placeholder:pl-3 my-2
               font-[font-standard] border border-1 border-black bg-slate-200 rounded-xl placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
           />
@@ -49,21 +50,23 @@ export const LoginPage = () => {
             placeholder="PASSWORD"
             type="password"
             required
-            className="w-4/5 md:w-11/12 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl 2xl:placeholder:text-4xl
-              py-2 2xl:py-4 placeholder:pl-3 my-2
+            className="w-4/5 md:w-11/12 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
+              py-2 placeholder:pl-3 my-2
               font-[font-standard] border border-1 border-black bg-slate-200 rounded-xl placeholder:text-gray-600 shadow-sm shadow-color-font-dark
             "
           />
 
           <div className="flex flex-col items-center gap-y-4">
+            <Link to="/">
             <button
               className="                
-                py-2 xl:py-4 2xl:py-6 px-3 2xl:px-5 mb-2 mt-10 lg:mt-10 xl:mt-16
+                py-2 xl:py-4 px-3 mb-2 mt-10 lg:mt-10 xl:mt-16
                 font-[font-got] border border-1 border-black bg-color-winter-button rounded-lg hover:bg-color-winter-header hover:text-color-font-light shadow-md shadow-color-font-dark hover:transition-shadow hover:shadow-sm hover:shadow-color-font-dark
               "
             >
               LOG IN
             </button>
+            </Link>
 
             <div className="font-[font-standard]">
               or create your account{" "}
