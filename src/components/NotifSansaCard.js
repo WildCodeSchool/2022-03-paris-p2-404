@@ -13,8 +13,9 @@ const NotifSansaCard = ({ sansa, date }) => {
             className="rounded-full object-cover h-12 w-12 m-2"
           />
           </Link>
-          <p>
-            <span className="font-bold">{sansa.firstName}</span> send you a
+          <p className='flex justify-center mx-5 text-center text-sm '>
+          {' '}
+            {sansa.firstName} sent you a
             message "I miss you"{' '}
           </p>{' '}
           <p className="mx-4">{date}</p>

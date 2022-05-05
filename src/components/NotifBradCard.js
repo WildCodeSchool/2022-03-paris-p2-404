@@ -13,9 +13,9 @@ const NotifBradCard = ({ brad, date }) => {
             alt={brad.firstName}
             className="rounded-full object-cover h-12 w-12 m-2"
           /></Link>
-          <p>
-            <span className="font-bold">{brad.firstName}</span> liked your post{' '}
-          </p>{' '}
+          <p className='flex justify-center mx-5 text-center text-sm'>
+           {brad.firstName} liked your post{' '}
+          </p>
           <p className="mx-4 ">{date}</p>
         </li>
       </ul>

@@ -13,9 +13,9 @@ const NotifRamsayCard = ({ ramsay, date }) => {
             className="rounded-full object-cover h-12 w-12 m-2"
           />
           </Link>
-          <p className="text-center">
+          <p className="className='flex justify-center mx-5 text-center text-sm '">
             {' '}
-            <span className="font-bold">{ramsay.firstName}</span> send you a
+            {ramsay.firstName} sent you a
             message "You are a bastard !"{' '}
           </p>{' '}
           <p className="mx-4">{date}</p>
@@ -28,9 +28,9 @@ const NotifRamsayCard = ({ ramsay, date }) => {
             className="rounded-full object-cover h-12 w-12 m-2"
           />
           </Link>
-          <p>
+          <p className='flex justify-center mx-5 text-center text-sm '>
             {' '}
-            <span className="font-bold">{ramsay.firstName}</span> send you a
+            {ramsay.firstName} sent you a
             duel request{' '}
           </p>{' '}
           <p className="mx-4 ">{date}</p>
