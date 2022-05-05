@@ -7,12 +7,11 @@ import Navbar from "./Navbar";
 import { CoverPictures } from "./coverPictures/CoverPictures";
 import Profile_Interact_Button from "./Profile_Interact_Button";
 import { UserPost } from "./UserPost";
-import throne from "../assets/icons/throne.png"
 import { useParams } from "react-router-dom";
+
 
 function ProfileInfoCard() {
     const [profiles, setProfiles] = useState({});
-    const [quotes, setQuotes] = useState({});
     
 
     let { id } = useParams();
@@ -23,14 +22,6 @@ function ProfileInfoCard() {
             .then(res => res.data)
             .then(data => setProfiles(data));
     }, [id]);
-
-    useEffect(() => {
-        axios
-            .get(`http://localhost:8000/api/quotes/${id}`)
-            .then(res => res.data)
-            .then(data => setQuotes(data));
-      }, [id]);
-
 
 
     return (
@@ -54,7 +45,7 @@ function ProfileInfoCard() {
                 </div>
                 <div className="flex flex-col items-center w-screen mb-8 border-2 p-2 customshadow">
                     <ProfileName profiles={profiles} />
-                    <ProfileQuote quotes={quotes} />
+                    <ProfileQuote />
                 </div>
                 <div className="w-4/6">
                     <div>

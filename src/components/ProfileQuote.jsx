@@ -1,30 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
-function ProfileQuote({ quotes }) {
-  const [random, setRandom] = useState()
-
-  const myRandomNumber = () => {
-    let randomChoose = parseInt(Math.floor(Math.random() * (quotes.length)));
-        setRandom(randomChoose)
-    }
+function ProfileQuote() {
+  const [quotes, setQuotes] = useState()
+  const {id} = useParams();
 
   useEffect(() => {
-      myRandomNumber();
-  }, [random])
+    axios
+        .get(`http://localhost:8000/api/quotes/${id}`)
+        .then(res => res.data)
+        .then(data => setQuotes(data));
+  }, [id]);
 
-console.log(quotes)
-console.log(random)
-// console.log(quotes[random].sentence)
-
-// console.log(quotes)
-// console.log(randomChoose)
-// console.log(char)
-
+  
 
   return (
     <div className='p-2'>
       {/* {quotes.filter((item, index, array) => {
-        return index === number;
+        return index === (Math.floor(Math.random()*array.length));
       }).map(quote => <p key={quote.sentence}>{`"${quote.sentence}"`}</p>)} */}
      <p>{}</p>
     </div>
