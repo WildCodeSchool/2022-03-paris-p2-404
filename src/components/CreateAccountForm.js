@@ -14,19 +14,25 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    console.log("fonction");
+
     const data = {
-      firstname: firstname,
-      lastname: lastname,
+      first_name: firstname,
+      last_name: lastname,
       title: title,
       family: family,
-      picture: picture,
+      list_imageUrl: picture,
       email: email,
       password: password,
     };
 
+    console.log(data);
+
     axios
       .post("http://localhost:8000/api/users", data)
-      .then((res) => console.log(res.data))
+      .then ((res)=>{
+        console.log(res.data)
+        window.location = '/';})
       .catch((err) => console.log(err));
   };
 
@@ -51,7 +57,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
               <br />-<br />
               Create your account
             </div>
-            <form>
+            <form onSubmit={(e) => handleSubmit(e)}>
               <input
                 placeholder="Firstname"
                 type="text"
@@ -101,7 +107,6 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
               <input
                 placeholder="Picture"
                 type="text"
-                required
                 value={picture}
                 onChange={(e) => setPicture(e.target.value)}
                 className="w-4/5 md:w-11/12 placeholder:pl-3 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
@@ -135,15 +140,14 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
               />
 
               <button
-                onSubmit={handleSubmit}
+                onClick={handleSubmit}
                 className="                
                 py-2 xl:py-4 px-3 mt-10 mb-10
                 font-[font-got] border border-1 border-black bg-color-winter-button rounded-lg hover:bg-color-winter-header hover:text-color-font-light shadow-md shadow-color-font-dark hover:transition-shadow hover:shadow-sm hover:shadow-color-font-dark
-              "
-              >
+              ">
                 Create
-              </button>
-            </form>
+                </button>
+              </form>
           </div>
         </div>
       )}
