@@ -17,8 +17,7 @@ function App() {
         <Route path="/users/:id" element={< ProfileInfoCard />} />
         <Route path="/myprofile" element={""} />
         <Route path="/latest" element={< NotificationMobilePage />} />
-        <Route path="/map" element={<Map />} />
-       
+        <Route path="/map" element={<Map />} />  
       </Routes>
     </div>
   );
