@@ -27,6 +27,11 @@ export const SearchBar = () => {
     console.log('search', searchTerm);
   };
 
+  //click outside to close :
+
+  const [isOpen, setIsOpen] = useState(false);
+
+
   return (
     <div className="search-container w-6/12 flex flex-col">
       <div className="search-inner relative flex">
@@ -64,6 +69,7 @@ export const SearchBar = () => {
             <Link to={`/users/${character.id}`} key={index}>
             <div
               onClick={() => onSearch(character.fullName)}
+              
               key={index}
               className="dropdown-row rounded-lg p-1 cursor-pointer  hover:bg-color-winter-header hover:text-color-font-light"
             >
