@@ -3,29 +3,26 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 function ProfileQuote() {
-  const [quotes, setQuotes] = useState(null)
   const {id} = useParams();
+  const [quotes, setQuotes] = useState([])
 
-  const whatSay = [];
   useEffect(() => {
     axios
         .get(`http://localhost:8000/api/quotes/${id}`)
         .then(res => res.data)
-        .then(data => {
-        setQuotes(data);
-        // console.log(data);
-        whatSay.push(data)
-        })}, []);
+        .then(data => setQuotes(data))
+      }, []);
 
-        console.log(quotes);
+      const oneQuote = quotes[Math.floor(Math.random()*quotes.length)];
 
         return (
-          <div className='p-2'>
-            {quotes.filter((item, index, array) => {
+          <div>
+            {/* {quotes.filter((item, index, array) => {
               return index === (Math.floor(Math.random()*array.length));
-            }).map(quote => <p key={quote.sentence}>{`"${quote.sentence}"`}</p>)}
-           <p>{}</p>
+            }).map(quote => <p key={quote[0].sentence}>{`"${quote[0].sentence}"`}</p>)} */}
+           <p>{oneQuote && oneQuote.sentence}</p>
           </div>
+          
         )
 
 };
