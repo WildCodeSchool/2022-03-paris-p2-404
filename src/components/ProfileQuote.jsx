@@ -12,7 +12,7 @@ function ProfileQuote() {
         .then(res => res.data)
         .then(data => setQuotes(data))
       }, []);
-
+ 
       const oneQuote = quotes[Math.floor(Math.random()*quotes.length)];
 
         return (
