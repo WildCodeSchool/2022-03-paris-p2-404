@@ -36,25 +36,6 @@ export const HomePage = () => {
           </div>
           <div className="PostList w-full lg:w-8/12">
             <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
-            <UserPost />
           </div>
         </div>
 
