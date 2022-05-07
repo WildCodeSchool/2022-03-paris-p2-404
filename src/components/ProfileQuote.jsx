@@ -6,12 +6,14 @@ function ProfileQuote() {
   const {id} = useParams();
   const [quotes, setQuotes] = useState([])
 
+  console.log(id);
+
   useEffect(() => {
     axios
         .get(`http://localhost:8000/api/quotes/${id}`)
         .then(res => res.data)
         .then(data => setQuotes(data))
-      }, []);
+      }, [id]);
  
       const oneQuote = quotes[Math.floor(Math.random()*quotes.length)];
 
