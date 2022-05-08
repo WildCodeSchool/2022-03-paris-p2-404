@@ -25,7 +25,7 @@
 /* Standardize fonts */
 
 body {
-  font-family: "font-standard";
+  font-family: 'font-standard';
 }
 /* body::-webkit-scrollbar {
   width: 0 !important;
@@ -36,15 +36,14 @@ body {
 body {
   overflow: -moz-scrollbars-none;
 } */
-body{
+body {
   scrollbar-width: none;
 }
-
 
 h1,
 h2,
 h3 {
-  font-family: "font-got";
+  font-family: 'font-got';
 }
 
 /* Set CSS variables */
@@ -78,17 +77,18 @@ h3 {
   --color-summer-hover-desktop-header: #f3f0d7;
 }
 
-
-.footerM,.headerM,.navbar{
+.footerM,
+.headerM,
+.navbar {
   box-shadow: 0px 0px 16px var(--color-font-dark);
-  position:fixed;
+  position: fixed;
   z-index: 10000000;
 }
-.headerM{
-  top:0;
+.headerM {
+  top: 0;
 }
-.footerM{
-  bottom:0;
+.footerM {
+  bottom: 0;
 }
 .profilecontent {
   position: absolute;
@@ -104,10 +104,44 @@ h3 {
   box-shadow: 1px 0px 16px var(--color-font-dark);
 }
 
-.mapContent{
+.mapContent {
   background-image: url('./assets/img/oldpapermap.jpg');
   background-size: cover;
   box-shadow: inset 0px 0px 24px 8px var(--color-font-dark);
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
+  /* display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr; */
 }
+/* .greatnorth {
+  grid-row: 1 / 2;
+  grid-column: 1 / 4;
+}
+.north {
+  grid-row: 2 / 3;
+  grid-column: 1 / 4;
+}
+.iron {
+  grid-row: 3/ 4;
+  grid-column: 2/ 3;
+}
+.mountain {
+  grid-row: 3/ 4;
+  grid-column: 3 / 4;
+}
+.rock {
+  grid-row: 3/ 4;
+  grid-column: 1 / 2;
+}
+.reach {
+  grid-row: 4/ 5;
+  grid-column: 1 / 2;
+}
+.storm {
+  grid-row: 4/ 5;
+  grid-column: 2/3;
+}
+
+.dorne {
+  grid-row: 5/6;
+  grid-column: 1 / 2;
+} */
