@@ -1,14 +1,14 @@
 import { Routes } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import React, { useState } from 'react';
-import PSdorne from '../assets/img/PSdorne.png';
-import PSvalemountain from '../assets/img/PSvalemountain.png';
-import PSgreatnorth from '../assets/img/PSgreatnorth.png';
-import PSironislands from '../assets/img/PSironislands.png';
-import PSnorth from '../assets/img/PSnorth.png';
-import PSreach from '../assets/img/PSreach.png';
-import PSstormlands from '../assets/img/PSstormlands.png';
-import PStherock from '../assets/img/PStherock.png';
+import dorne from '../assets/img/dorne.png';
+import vale from '../assets/img/vale.png';
+import gnorth from '../assets/img/gnorth.png';
+import river from '../assets/img/river.png';
+import north from '../assets/img/north.png';
+import reach from '../assets/img/reach.png';
+import stormlands from '../assets/img/stormlands.png';
+import rock from '../assets/img/rock.png';
 import compass from '../assets/icons/compass.png';
 import MobileFooter from '../components/MobileFooter';
 import MobileHeader from '../components/MobileHeader';
@@ -18,9 +18,9 @@ import { NorthUsersList } from '../components/locations/locationsUsersLists/Nort
 import { MountainAndValeUserList } from '../components/locations/locationsUsersLists/MountainAndValeUserList';
 import { IslesAndRiversUsersList } from '../components/locations/locationsUsersLists/IslesAndRiversUsersList';
 import { TheRockUsersList } from '../components/locations/locationsUsersLists/TheRockUserList';
-import {StormLandsUsersList} from '../components/locations/locationsUsersLists/StormLandsUsersList';
-import {TheReachUsersList} from '../components/locations/locationsUsersLists/TheReachUsersList';
-import {DorneUsersList} from '../components/locations/locationsUsersLists/DorneUsersList';
+import { StormLandsUsersList } from '../components/locations/locationsUsersLists/StormLandsUsersList';
+import { TheReachUsersList } from '../components/locations/locationsUsersLists/TheReachUsersList';
+import { DorneUsersList } from '../components/locations/locationsUsersLists/DorneUsersList';
 import { KingsLandingUsersList } from '../components/locations/locationsUsersLists/KingsLandingUsersList';
 
 export const Map = () => {
@@ -33,9 +33,6 @@ export const Map = () => {
   const [isVisible7, setIsVisible7] = useState(false);
   const [isVisible8, setIsVisible8] = useState(false);
   const [isVisible9, setIsVisible9] = useState(false);
-
- 
-  
 
   const handleVisible = () => {
     setIsVisible(!isVisible);
@@ -144,321 +141,328 @@ export const Map = () => {
   };
 
   return (
-    <div className=" mt-32 ">
+    <div className="  ">
       <div className="hidden fixed top-0 lg:block z-50">
         <Navbar />
       </div>
       <div className="MobileHeader lg:hidden top:0">
         <MobileHeader />
       </div>
-
-      {/* /////////////////////////USERSLISTS/////////////////////////// */}
-      {isVisible && (
-        <div className=" w-full h-full my-4   ">
-          <div
-            className="fixed bottom-50 top-20 z-40 
+      <div className=" main mt-32 flex flex-col justify-center items-center h-full">
+        {/* /////////////////////////USERSLISTS/////////////////////////// */}
+        {isVisible && (
+          <div className=" w-full h-full my-4   ">
+            <div
+              className="fixed bottom-50 top-20 z-40 
           h-screen w-screen lg:w-2/6  "
-          >
-            <div
-              onClick={handleVisible}
-              className="closebutton 
+            >
+              <div
+                onClick={handleVisible}
+                className="closebutton 
               absolute right-4 flex justify-center items-center text-center align-middle
               my-4 rounded-full
-              cursor-pointer hover:scale-125 hover:bg-color-winter-header hover:text-white "
-            >
-              <CloseIcon />
-            </div>
-            <div>
-              <GreatNorthUsersList/>
+              cursor-pointer  hover:bg-color-winter-header hover:text-white "
+              >
+                <CloseIcon />
+              </div>
+              <div>
+                <GreatNorthUsersList />
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {isVisible2 && (
-        <div className=" w-full h-full my-4   ">
-          <div
-            className="fixed bottom-50 top-20 z-40
+        {isVisible2 && (
+          <div className=" w-full h-full my-4   ">
+            <div
+              className="fixed bottom-50 top-20 z-40
             h-screen w-screen lg:w-2/6"
-          >
-            <div
-              onClick={handleVisible2}
-              className="closebutton 
+            >
+              <div
+                onClick={handleVisible2}
+                className="closebutton 
               absolute right-4 flex justify-center items-center text-center align-middle
               my-4 rounded-full
-              cursor-pointer hover:scale-125 hover:bg-color-winter-header hover:text-white"
-            >
-              <CloseIcon />
-            </div>
-            <div >
-              <NorthUsersList/>
+              cursor-pointer  hover:bg-color-winter-header hover:text-white"
+              >
+                <CloseIcon />
+              </div>
+              <div>
+                <NorthUsersList />
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {isVisible3 && (
-        <div className=" w-full h-full my-4  ">
-          <div
-            className="fixed bottom-50 top-20 z-40
+        {isVisible3 && (
+          <div className=" w-full h-full my-4  ">
+            <div
+              className="fixed bottom-50 top-20 z-40
             h-screen w-screen lg:w-2/6 "
-          >
-            <div
-              onClick={handleVisible3}
-              className="closebutton 
+            >
+              <div
+                onClick={handleVisible3}
+                className="closebutton 
               absolute right-4 flex justify-center items-center text-center align-middle
               my-4 rounded-full
-              cursor-pointer hover:scale-125 hover:bg-color-winter-header hover:text-white"
-            >
-              <CloseIcon />
-            </div>
-            <div >
-              <MountainAndValeUserList/>
+              cursor-pointer  hover:bg-color-winter-header hover:text-white"
+              >
+                <CloseIcon />
+              </div>
+              <div>
+                <MountainAndValeUserList />
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-{isVisible4 && (
-        <div className=" w-full h-full my-4 ">
-          <div
-            className="fixed bottom-50 top-20 z-40
+        {isVisible4 && (
+          <div className=" w-full h-full my-4 ">
+            <div
+              className="fixed bottom-50 top-20 z-40
             h-screen w-screen lg:w-2/6 "
-          >
-            <div
-              onClick={handleVisible4}
-              className="closebutton 
+            >
+              <div
+                onClick={handleVisible4}
+                className="closebutton 
               absolute right-4 flex justify-center items-center text-center align-middle
               my-4 rounded-full
-              cursor-pointer hover:scale-125 hover:bg-color-winter-header hover:text-white"
-            >
-              <CloseIcon />
-            </div>
-            <div >
-             <IslesAndRiversUsersList/>
+              cursor-pointer  hover:bg-color-winter-header hover:text-white"
+              >
+                <CloseIcon />
+              </div>
+              <div>
+                <IslesAndRiversUsersList />
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-{isVisible5 && (
-        <div className=" w-full h-full my-4   ">
-          <div
-            className="fixed bottom-50 top-20 z-40
+        {isVisible5 && (
+          <div className=" w-full h-full my-4   ">
+            <div
+              className="fixed bottom-50 top-20 z-40
             h-screen w-screen lg:w-2/6"
-          >
-            <div
-              onClick={handleVisible5}
-              className="closebutton 
+            >
+              <div
+                onClick={handleVisible5}
+                className="closebutton 
               absolute right-4 flex justify-center items-center text-center align-middle
               my-4 rounded-full
-              cursor-pointer hover:scale-125 hover:bg-color-winter-header hover:text-white"
-            >
-              <CloseIcon />
-            </div>
-            <div >
-              <TheRockUsersList/>
+              cursor-pointer  hover:bg-color-winter-header hover:text-white"
+              >
+                <CloseIcon />
+              </div>
+              <div>
+                <TheRockUsersList />
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-{isVisible6 && (
-        <div className=" w-full h-full my-4  ">
-          <div
-            className="fixed bottom-50 top-20 z-40
+        {isVisible6 && (
+          <div className=" w-full h-full my-4  ">
+            <div
+              className="fixed bottom-50 top-20 z-40
             h-screen w-screen lg:w-2/6 "
-          >
-            <div
-              onClick={handleVisible6}
-              className="closebutton 
+            >
+              <div
+                onClick={handleVisible6}
+                className="closebutton 
               absolute right-4 flex justify-center items-center text-center align-middle
               my-4 rounded-full
-              cursor-pointer hover:scale-125 hover:bg-color-winter-header hover:text-white"
-            >
-              <CloseIcon />
-            </div>
-            <div >
-              <StormLandsUsersList/>
+              cursor-pointer  hover:bg-color-winter-header hover:text-white"
+              >
+                <CloseIcon />
+              </div>
+              <div>
+                <StormLandsUsersList />
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-{isVisible7 && (
-        <div className=" w-full h-full my-4  ">
-          <div
-            className="fixed bottom-50 top-20 z-40
+        {isVisible7 && (
+          <div className=" w-full h-full my-4  ">
+            <div
+              className="fixed bottom-50 top-20 z-40
             h-screen w-screen lg:w-2/6"
-          >
-            <div
-              onClick={handleVisible7}
-              className="closebutton 
+            >
+              <div
+                onClick={handleVisible7}
+                className="closebutton 
               absolute right-4 flex justify-center items-center text-center align-middle
               my-4 rounded-full
-              cursor-pointer hover:scale-125 hover:bg-color-winter-header hover:text-white "
-            >
-              <CloseIcon />
-            </div>
-            <div >
-          <TheReachUsersList/>
+              cursor-pointer  hover:bg-color-winter-header hover:text-white "
+              >
+                <CloseIcon />
+              </div>
+              <div>
+                <TheReachUsersList />
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-{isVisible8 && (
-        <div className=" w-full h-full my-4   ">
-          <div
-            className="fixed bottom-50 top-20 z-40
+        {isVisible8 && (
+          <div className=" w-full h-full my-4   ">
+            <div
+              className="fixed bottom-50 top-20 z-40
             h-screen w-screen lg:w-2/6"
-          >
-            <div
-              onClick={handleVisible8}
-              className="closebutton 
+            >
+              <div
+                onClick={handleVisible8}
+                className="closebutton 
               absolute right-4 flex justify-center items-center text-center align-middle
               my-4 rounded-full
-              cursor-pointer hover:scale-125 hover:bg-color-winter-header hover:text-white "
-            >
-              <CloseIcon />
-            </div>
-            <div className="">
-              <DorneUsersList/>
+              cursor-pointer  hover:bg-color-winter-header hover:text-white "
+              >
+                <CloseIcon />
+              </div>
+              <div className="">
+                <DorneUsersList />
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-{isVisible9 && (
-        <div className=" w-full h-full my-4 ">
-          <div
-            className="fixed bottom-50 top-20 z-40 overflow-auto scrollbar-hide
+        {isVisible9 && (
+          <div className=" w-full h-full my-4 ">
+            <div
+              className="fixed bottom-50 top-20 z-40 overflow-auto scrollbar-hide
             h-screen w-screen lg:w-2/6 
           bg-white ccustomshadow"
-          >
-            <div
-              onClick={handleVisible9}
-              className="closebutton 
+            >
+              <div
+                onClick={handleVisible9}
+                className="closebutton 
               absolute right-4 flex justify-center items-center text-center align-middle
               my-4 rounded-full
-              cursor-pointer hover:scale-125 hover:bg-color-winter-header hover:text-white"
-            >
-              <CloseIcon />
-            </div>
-            <div className="">
-              <KingsLandingUsersList/>
+              cursor-pointer  hover:bg-color-winter-header hover:text-white"
+              >
+                <CloseIcon />
+              </div>
+              <div className="">
+                <KingsLandingUsersList />
+              </div>
             </div>
           </div>
+        )}
+
+        {/* //////////////////////LIST//////////////////////////// */}
+        <div className="mapTitle flex flex-row items-center justify-center">
+          <img className=" w-16 h-16" alt="compass" src={compass}></img>
+          <h1 className="sevenKingdoms text-center text-2xl">
+            The seven kingdoms
+          </h1>
         </div>
-      )}
 
-      {/* //////////////////////LIST//////////////////////////// */}
-      <div className="mapTitle flex flex-row items-center justify-center m-4 mx-16 gap-2">
-        <img className=" w-16 h-16" alt="compass" src={compass}></img>
-        <h1 className="sevenKingdoms text-center text-2xl">
-          The seven kingdoms
-        </h1>
-      </div>
-
-      <div
-        className="mapContent
-      grid grid-cols-2 
-    m-4 lg:m-16 lg:mx-48 h-full items-center justify-center
+        <div
+          className="mapContent flex flex-col items-center justify-center
+      w-11/12 h-auto flex-wrap
+      mb-32 mt-8
       shadow-slate-700"
-      >
-        <h2 className="countries m-4 text-center wrap lg:text-2xl">The Great North</h2>
-        <div className=" mb-20 hover:scale-125 transition-all w-full  ">
-          <img
-            onClick={handleVisible}
-            className="greatnorth  w-full h-full cursor-pointer transition-all"
-            alt="#"
-            src={PSgreatnorth}
-          ></img>
-        </div>
+        >
+          {/* <h2 className="countries m-4 text-center wrap lg:text-2xl">The Great North</h2> */}
+          {/* <h2 className="countries m-4 text-center lg:text-2xl">The North</h2> */}
+          {/* <h2 className="countries m-4 text-center lg:text-2xl">Isles and the Rivers</h2> */}
+          {/* <h2 className="countries m-4 text-center lg:text-2xl">Mountain and the vale</h2> */}
+          {/* <h2 className="countries m-4 text-center lg:text-2xl">The rock</h2>*/}
+          {/* <h2 className="countries m-4 text-center lg:text-2xl">The reach</h2> */}
+          {/* <h2 className="countries m-4 text-center lg:text-2xl">Stormlands</h2> */}
+          {/* <h2 className="countries m-4 text-center lg:text-2xl">Dorne</h2> */}
+          <div className="l1 w-full flex justify-center items-center">
+            <div className="greatnorth hover:scale-110 transition-all w-6/12  ">
+              <img
+                onClick={handleVisible}
+                className="greatnorth  h-full cursor-pointer transition-all"
+                alt="#"
+                src={gnorth}
+              ></img>
+            </div>
+          </div>
+          <div className="l2 w-full flex justify-center items-center ">
+            <div className="north hover:scale-110  transition-all w-6/12  ">
+              <img
+                onClick={handleVisible2}
+                className="north  h-full cursor-pointer"
+                src={north}
+                alt="north"
+              />
+            </div>
+          </div>
+          
+          <div className="l3 mb-16 flex flex-row">
+          <div className="rock hover:scale-110 transition-all w-full  ">
+              <img
+                onClick={handleVisible5}
+                className="  w-full h-full mt-16 cursor-pointer"
+                alt="#"
+                src={rock}
+              ></img>
+            </div>
+            <div className="iron hover:scale-110 transition-all w-full  ">
+              <img
+                onClick={handleVisible4}
+                className=" w-full h-full cursor-pointer"
+                alt="#"
+                src={river}
+              ></img>
+            </div>
 
-        <h2 className="countries m-4 text-center lg:text-2xl">The North</h2>
-        <div className=" m-2 mx-4 hover:scale-125 transition-all w-full  ">
-          <img
-            onClick={handleVisible2}
-            className="greatnorth  w-full h-full cursor-pointer"
-            src={PSnorth}
-            alt="north"
-          />
-        </div>
+            <div className="mountain hover:scale-110  transition-all w-full  ">
+              <img
+                onClick={handleVisible3}
+                className="  w-full h-full cursor-pointer"
+                alt="#"
+                src={vale}
+              ></img>
+            </div>
 
-        <h2 className="countries m-4 text-center lg:text-2xl">Isles and the Rivers</h2>
-        <div className=" mr-24 hover:scale-125 transition-all w-full  ">
-          <img
-            onClick={handleVisible4}
-            className="greatnorth  w-full h-full cursor-pointer"
-            alt="#"
-            src={PSironislands}
-          ></img>
-        </div>
+            
+          </div>
+          <div className="l4 -mt-16 flex flex-row">
+            <div className="reach hover:scale-110  transition-all w-full  ">
+              <img
+                onClick={handleVisible7}
+                className="  w-full h-full cursor-pointer"
+                alt="#"
+                src={reach}
+              ></img>
+            </div>
 
-        
-
-        <h2 className="countries m-4 text-center lg:text-2xl">Mountain and the vale</h2>
-        <div className=" ml-16 hover:scale-125 transition-all w-4/5  ">
-          <img
-            onClick={handleVisible3}
-            className="greatnorth  w-full h-full cursor-pointer"
-            alt="#"
-            src={PSvalemountain}
-          ></img>
-        </div>
-        
-        <h2 className="countries m-4 text-center lg:text-2xl">The rock</h2>
-        <div className=" mr-16 mt-20 hover:scale-125 transition-all w-full  ">
-          <img
-            onClick={handleVisible5}
-            className="greatnorth  w-full h-full cursor-pointer"
-            alt="#"
-            src={PStherock}
-          ></img>
-        </div>
-
-        <h2 className="countries m-4 text-center lg:text-2xl">The reach</h2>
-        <div className="  ml-12 hover:scale-125 transition-all w-full  ">
-          <img
-            onClick={handleVisible7}
-            className="greatnorth  w-full h-full cursor-pointer"
-            alt="#"
-            src={PSreach}
-          ></img>
-        </div>
-
-        <h2 className="countries m-4 text-center lg:text-2xl">Stormlands</h2>
-        <div className=" m-2 mr-8 hover:scale-110 transition-all w-full  ">
-          <img
-            onClick={handleVisible6}
-            className="greatnorth  w-full h-full cursor-pointer"
-            alt="#"
-            src={PSstormlands}
-          ></img>
-        </div>
-        
-        <h2 className="countries m-4 text-center lg:text-2xl">Dorne</h2>
-        <div className=" m-2 mt-16 hover:scale-150 transition-all w-4/5  ">
-          <img
-          onClick={handleVisible8}
-            className="greatnorth mt-8 w-full h-full cursor-pointer"
-            alt="#"
-            src={PSdorne}
-          ></img>
-        </div>
-        <h2 className="countries m-4 text-center lg:text-2xl">King's Landing</h2>
-        <div className=" hover:scale-125 transition-all w-full  ">
+            <div className="storm hover:scale-110 transition-all w-full  ">
+              <img
+                onClick={handleVisible6}
+                className="  w-full  h-full cursor-pointer"
+                alt="#"
+                src={stormlands}
+              ></img>
+            </div>
+          </div>
+          <div className="l5 w-6/12 mb-8">
+            <div className="dorne   hover:scale-110 transition-all w-full  ">
+              <img
+                onClick={handleVisible8}
+                className="  w-full h-full cursor-pointer"
+                alt="#"
+                src={dorne}
+              ></img>
+            </div>
+          </div>
+          {/* <h2 className="countries m-4 text-center lg:text-2xl">King's Landing</h2> */}
+          {/* <div className="  transition-all w-full  ">
           <img
           onClick={handleVisible9}
             className="greatnorth  w-full h-full cursor-pointer"
             alt="#"
-            src={PSnorth}
+            src={north}
           ></img>
+        </div> */}
         </div>
-      </div>
-      <div className="lg:hidden">
-        <MobileFooter />
+        <div className="lg:hidden w-screen">
+          <MobileFooter />
+        </div>
       </div>
     </div>
   );

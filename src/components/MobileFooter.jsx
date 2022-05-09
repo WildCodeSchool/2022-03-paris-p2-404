@@ -7,8 +7,8 @@ import { NavLink } from "react-router-dom";
 function MobileFooter() {
 
     return (
-        <div className="footerM text-color-heart-icon bg-color-winter-footer
-        h-20 w-full flex flex-row justify-around">
+        <div className="footerM bg-color-winter-footer
+        h-16 sm:h-20 w-full flex flex-row justify-around">
         
           <NavLink to="/map" className="flex w-1/4 justify-center items-center" >
               <img  className="h-3/4" src={compassLogo} alt="compass icon" />
