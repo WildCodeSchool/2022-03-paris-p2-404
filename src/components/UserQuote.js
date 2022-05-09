@@ -2,7 +2,7 @@
 export const UserQuote = ({ character }) => {
   let quote;
 
-  switch (character.firstName) {
+  switch (character.first_name) {
     case "Jon":
       quote = "If I fall, don't bring me back";
       break;
