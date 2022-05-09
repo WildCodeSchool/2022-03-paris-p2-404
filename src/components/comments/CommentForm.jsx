@@ -40,10 +40,10 @@ export const CommentForm = (props) => {
         <div >
           <LikeCounter />
         </div>
-        <div class="mx-1 text-color-winter-background">
+        <div className="mx-1 text-color-winter-background">
           <ChatIcon />
           <span
-            class="text-color-font-dark font-bold mx-1">
+            className="text-color-font-dark font-bold mx-1">
             {commentCount}
           </span>
         </div>
@@ -54,7 +54,7 @@ export const CommentForm = (props) => {
           placeholder="Add comment here"
           value={input}
           name="text"
-          className="comment-input"
+          className="comment-input border-0 w-full rounded-2xl px-2 my-2 shadow-inner shadow-color-winter-header "
           onChange={handleChange}
           class="border-0 w-full h-8 rounded-2xl px-2 my-2 shadow-inner shadow-color-winter-header "
         />

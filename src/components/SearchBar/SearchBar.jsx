@@ -36,11 +36,12 @@ export const SearchBar = () => {
     <div className="search-container w-6/12 flex flex-col">
       <div className="search-inner relative flex">
         <input
+       
           type="text"
           value={value}
           placeholder="Search character..."
           onChange={onChange}
-          class="border-0 w-full rounded-2xl px-2 py-1  shadow-inner shadow-color-winter-header "
+          className="border-0 w-full rounded-2xl px-2 py-1  shadow-inner shadow-color-winter-header "
         />
 
         <span
@@ -52,7 +53,12 @@ export const SearchBar = () => {
           <SearchIcon />
         </span>
       </div>
-      <div className="dropdown my-1 rounded-lg bg-slate-300  border-black  empty:border-0 shadow-md shadow-color-font-dark">
+      <div 
+       onMouseLeave={()=> setValue('')}
+      className="dropdown
+      
+       my-1 rounded-lg 
+       bg-slate-300  border-black  empty:border-0 shadow-md shadow-color-font-dark">
         {characters
           .filter((character) => {
             const searchCharacter = value.toLocaleLowerCase();
