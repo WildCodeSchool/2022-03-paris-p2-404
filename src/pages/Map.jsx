@@ -353,7 +353,7 @@ export const Map = () => {
       )}
 
       {/* //////////////////////LIST//////////////////////////// */}
-      <div className="mapTitle flex flex-row items-center justify-center m-4 mx-16 gap-2">
+      <div className="mapTitle flex flex-row items-center justify-center">
         <img className=" w-16 h-16" alt="compass" src={compass}></img>
         <h1 className="sevenKingdoms text-center text-2xl">
           The seven kingdoms
@@ -457,7 +457,7 @@ export const Map = () => {
           ></img>
         </div>
       </div>
-      <div className="lg:hidden">
+      <div className="lg:hidden w-screen">
         <MobileFooter />
       </div>
     </div>

@@ -111,14 +111,3 @@ h3 {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
 }
-.unclicked{
-  transition: ease-in-out 2000ms;
-  translate: translateX(400px);
-  left:-6rem;
-
-}
-.clicked{
-  transition: ease-in-out 2000ms; 
-  translate: translateX(0px);
-  left:200px;
-}
