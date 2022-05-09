@@ -17,7 +17,7 @@ export const UserPost = () => {
   const [quotes, setQuotes] = useState([])
   const [quoteExist, setQuoteExist] = useState(true);
   const defaultQuote = "Winter is coming !"
-  let randomId = Math.floor(Math.random() * 53);
+  let randomId = Math.floor((Math.random() * 52) + 1);
 
 
   // Fetch API. Get a random character data and store it into character state above

@@ -6,7 +6,7 @@ const NotifRamsayCard = ({ ramsay, date }) => {
     <div>
       <ul className="mx-2  rounded-2xl">
         <li className="flex flex-row justify-between items-center bg-color-winter-primary border-solid border rounded-2xl border-black mb-4 shadow-color-font-dark shadow-md	">
-        <Link to={`/users/35`}>
+        <Link to={`/users/36`}>
             <img
             src={ramsay.imageUrl}
             alt={ramsay.firstName}
@@ -21,7 +21,7 @@ const NotifRamsayCard = ({ ramsay, date }) => {
           <p className="mx-4">{date}</p>
         </li>
         <li className="flex flex-row items-center justify-between bg-color-winter-primary border-solid border rounded-2xl border-black shadow-color-font-dark shadow-md		">
-        <Link to={`/users/35`}>
+        <Link to={`/users/36`}>
           <img
             src={ramsay.imageUrl}
             alt={ramsay.firstName}

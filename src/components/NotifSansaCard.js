@@ -6,7 +6,7 @@ const NotifSansaCard = ({ sansa, date }) => {
     <div className="">
       <ul className="mx-2 shadow-color-font-dark shadow-md rounded-2xl">
         <li className="flex flex-row justify-between items-center bg-color-winter-primary border-solid border rounded-2xl border-black	">
-        <Link to={`/users/4`}>
+        <Link to={`/users/5`}>
           <img
             src={sansa.imageUrl}
             alt={sansa.firstName}

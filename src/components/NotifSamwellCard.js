@@ -6,7 +6,7 @@ const NotifSamwellCard = ({ samwell, date }) => {
     <div className="">
       <ul className="mx-2 shadow-color-font-dark shadow-md rounded-2xl">
         <li className="flex flex-row justify-between items-center bg-color-winter-primary border-solid border rounded-2xl border-black	">
-        <Link to={`/users/1`}>
+        <Link to={`/users/2`}>
           <img
             src={samwell.imageUrl}
             alt={samwell.firstName}
