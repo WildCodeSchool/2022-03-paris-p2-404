@@ -42,6 +42,24 @@ export const UserList = () => {
       <UserPost />
       <UserPost />
       <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      <UserPost />
+      
     </div>
   );
 };

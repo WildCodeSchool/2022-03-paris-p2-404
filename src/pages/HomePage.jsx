@@ -35,7 +35,7 @@ export const HomePage = () => {
             <h1 className="lg:text-2xl">LATEST ACTIVITY</h1>
           </div>
           <div className="PostList w-full lg:w-8/12">
-            <UserPost />
+            {Array.apply(null, {length: ((Math.random()*30)+15)}).map(item => <UserPost />)}
           </div>
         </div>
 

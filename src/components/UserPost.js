@@ -15,6 +15,10 @@ export const UserPost = () => {
   // Set up state to store character information
   const [character, setCharacter] = useState({});
   const [quotes, setQuotes] = useState([])
+  const [quoteExist, setQuoteExist] = useState(true);
+  const defaultQuote = "Winter is coming !"
+  let randomId = Math.floor(Math.random() * 53);
+
 
   // Fetch API. Get a random character data and store it into character state above
   useEffect(() => {
@@ -23,16 +27,16 @@ export const UserPost = () => {
       .then((res) => res.data)
       .then((data) => setCharacter(data));
   }, []);
-  let randomId = Math.floor(Math.random() * 53);
 
   useEffect(() => {
     axios
         .get(`http://localhost:8000/api/quotes/${randomId}`)
         .then(res => res.data)
-        .then(data => setQuotes(data))
+        .then(data => {
+          setQuoteExist(true);
+          setQuotes(data)})
+        .catch(() => setQuoteExist(false))
       }, []);
-
-      const oneQuote = quotes[Math.floor(Math.random()*quotes.length)];
 
   return (
     <div className="UserPost relative bg-color-winter-primary w-full my-4 rounded-lg text-color-black shadow-color-font-dark shadow-md">
@@ -55,7 +59,7 @@ export const UserPost = () => {
       <hr className="w-full lg:w-10/12 absolute right-0 border-1 border-black" />
       <div className="postContent px-10">
         {/* Display post content */}
-        <UserQuote quote={oneQuote} />
+        <UserQuote quotes={quotes} quoteExist={quoteExist} defaultQuote={defaultQuote}/>
       </div>
       <hr className="border-1 border-black shadow-black shadow-sm" />
       <div className="font-[font-standard]">
