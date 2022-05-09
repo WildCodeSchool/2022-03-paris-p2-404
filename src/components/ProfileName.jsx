@@ -5,7 +5,7 @@ import BadgeIcon from '@mui/icons-material/Badge';
 
 function ProfileName(props) {
 
-  const {id, fullName, title, family} = props.profiles;
+  const { fullName, title, family} = props.profiles;
   
   return (
     <div className='flex flex-col items-center'>
