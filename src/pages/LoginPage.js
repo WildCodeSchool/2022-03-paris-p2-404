@@ -3,6 +3,7 @@ import snowstorm from "../assets/videos/snowstorm.mp4";
 import { Link } from "react-router-dom";
 import { CreateAccountForm } from "../components/CreateAccountForm";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const LoginPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,6 +11,7 @@ export const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,8 +25,11 @@ export const LoginPage = () => {
     axios
       .post("http://localhost:8000/api/users/auth", data)
       .then ((res)=>{
-        console.log(res.data)
-        window.location = '/';})
+        if (res.data === "reject") {
+          navigate('/wronglogin');}
+        else if (res.data === "loginOK") {
+          navigate('/');
+        }})
       .catch((err) => console.log(err));
   };
 

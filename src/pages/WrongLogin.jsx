@@ -3,8 +3,7 @@ import {Link} from "react-router-dom";
 function WrongLogin() {
 
     return(
-        <div>
-            
+        <div>    
             <h1>
                 Wrong credentials
             </h1>

@@ -18,7 +18,7 @@ function App() {
         <Route path="/myprofile" element={""} />
         <Route path="/latest" element={< NotificationMobilePage />} />
         <Route path="/map" element={<Map />} />
-        <Route path="/wronglogin" element={WrongLogin} />
+        <Route path="/wronglogin" element={<WrongLogin />} />
       </Routes>
     </div>
   );
