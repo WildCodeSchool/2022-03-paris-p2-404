@@ -18,10 +18,13 @@ function MyProfile() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/users/3`)
-            .then(res => res.data)
+            .get(`http://localhost:8000/api/myprofile`)
+            .then(res => {
+                console.log(res.data);
+                return res.data;
+            })
             .then(data => setProfiles(data));
-    }, [id]);
+    }, []);
 
 
     return (
