@@ -72,7 +72,7 @@ export const SearchBar = () => {
           })
           .slice(0, 10) // limit to 10 results
           .map((character, index) => (
-            <Link to={`/users/${character.id}`} key={index}>
+            <Link to={`/users/${(character.id +1)}`} key={index}>
             <div
               onClick={() => onSearch(character.fullName)}
               
