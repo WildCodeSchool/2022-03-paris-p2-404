@@ -6,6 +6,7 @@ import { LoginPage } from "./pages/LoginPage";
 import {Map} from "./pages/Map";
 import NotificationMobilePage from "./components/pages/NotificationMobilePage";
 import WrongLogin from "./pages/WrongLogin";
+import MyProfile from "./pages/MyProfile";
 
 function App() {
   
@@ -15,7 +16,7 @@ function App() {
         <Route path="/" element={< HomePage />} />
         <Route path="/login" element={< LoginPage />} />
         <Route path="/users/:id" element={< ProfileInfoCard />} />
-        <Route path="/myprofile" element={""} />
+        <Route path="/myprofile" element={<MyProfile />} />
         <Route path="/latest" element={< NotificationMobilePage />} />
         <Route path="/map" element={<Map />} />
         <Route path="/wronglogin" element={<WrongLogin />} />

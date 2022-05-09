@@ -40,9 +40,9 @@ useEffect(() => {
   {showMenu &&    /* It's like if/else */
   <div onMouseLeave={()=> setShowMenu(!showMenu)} className="origin-top-right absolute right-0 mt-2 w-56 rounded-lg shadow-md shadow-color-font-dark  bg-slate-300 ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
     <div className="py-1" role="none">
-    <button type="submit" className="text-black block w-full text-left px-4 py-2 text-sm hover:bg-color-winter-header hover:text-color-font-light rounded-lg" role="menuitem" tabindex="-1" id="menu-item-1">My profile</button>
-    <a href="#" className="text-black block px-4 py-2 text-sm hover:bg-color-winter-header hover:text-color-font-light rounded-lg" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
-    <button type="submit" className="text-black block w-full text-left px-4 py-2 text-sm hover:bg-color-winter-header hover:text-color-font-light rounded-lg" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+    <Link to="/myprofile"><button type="submit" className="text-black block w-full text-left px-4 py-2 text-sm hover:bg-color-winter-header hover:text-color-font-light rounded-lg" role="menuitem" tabindex="-1" id="menu-item-1">My profile</button></Link>
+    <button className="text-black block px-4 py-2 text-sm hover:bg-color-winter-header hover:text-color-font-light rounded-lg" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</button>
+    <Link to="/login"><button type="submit" className="text-black block w-full text-left px-4 py-2 text-sm hover:bg-color-winter-header hover:text-color-font-light rounded-lg" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button></Link>
     </div>
   </div>}
 </div>

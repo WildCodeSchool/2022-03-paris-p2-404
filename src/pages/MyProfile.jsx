@@ -1,16 +1,16 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import ProfilePicture from "./ProfilePicture";
-import ProfileName from "./ProfileName";
-import ProfileQuote from "./ProfileQuote";
-import Navbar from "./Navbar";
-import { CoverPictures } from "./coverPictures/CoverPictures";
-import Profile_Interact_Button from "./Profile_Interact_Button";
-import { UserPost } from "./UserPost";
+import ProfilePicture from "../components/ProfilePicture";
+import ProfileName from "../components/ProfileName";
+import ProfileQuote from "../components/ProfileQuote";
+import Navbar from "../components/Navbar";
+import { CoverPictures } from "../components/coverPictures/CoverPictures";
+import Profile_Interact_Button from "../components/Profile_Interact_Button";
+import { UserPost } from "../components/UserPost";
 import { useParams } from "react-router-dom";
 
 
-function ProfileInfoCard() {
+function MyProfile() {
     const [profiles, setProfiles] = useState({});
     
 
@@ -18,7 +18,7 @@ function ProfileInfoCard() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/users/${id}`)
+            .get(`http://localhost:8000/api/users/3`)
             .then(res => res.data)
             .then(data => setProfiles(data));
     }, [id]);
@@ -56,4 +56,4 @@ function ProfileInfoCard() {
         </div>
     );
 };
-export default ProfileInfoCard;
+export default MyProfile;
