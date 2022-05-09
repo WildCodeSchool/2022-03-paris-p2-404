@@ -5,7 +5,7 @@ import { HomePage } from "./pages/HomePage";
 import { LoginPage } from "./pages/LoginPage";
 import {Map} from "./pages/Map";
 import NotificationMobilePage from "./components/pages/NotificationMobilePage";
-
+import WrongLogin from "./pages/WrongLogin";
 
 function App() {
   
@@ -17,7 +17,8 @@ function App() {
         <Route path="/users/:id" element={< ProfileInfoCard />} />
         <Route path="/myprofile" element={""} />
         <Route path="/latest" element={< NotificationMobilePage />} />
-        <Route path="/map" element={<Map />} />  
+        <Route path="/map" element={<Map />} />
+        <Route path="/wronglogin" element={<WrongLogin />} />
       </Routes>
     </div>
   );

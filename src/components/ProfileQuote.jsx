@@ -4,14 +4,22 @@ import { useParams } from 'react-router-dom';
 
 function ProfileQuote() {
   const {id} = useParams();
-  const [quotes, setQuotes] = useState([])
+  const [quotes, setQuotes] = useState([]);
+  const [quoteExist, setQuoteExist] = useState(true);
+  const defaultQuote = "Winter is coming !"
+
+  console.log(id);
+  console.log(quoteExist);
 
   useEffect(() => {
     axios
         .get(`http://localhost:8000/api/quotes/${id}`)
         .then(res => res.data)
-        .then(data => setQuotes(data))
-      }, []);
+        .then(data => {
+          setQuoteExist(true);
+          setQuotes(data)})
+        .catch(() => setQuoteExist(false))
+      }, [id]);
  
       const oneQuote = quotes[Math.floor(Math.random()*quotes.length)];
 
@@ -20,7 +28,7 @@ function ProfileQuote() {
             {/* {quotes.filter((item, index, array) => {
               return index === (Math.floor(Math.random()*array.length));
             }).map(quote => <p key={quote[0].sentence}>{`"${quote[0].sentence}"`}</p>)} */}
-           <p>{oneQuote && oneQuote.sentence}</p>
+           <p>{quoteExist ? oneQuote && oneQuote.sentence : defaultQuote}</p>
           </div>
           
         )
