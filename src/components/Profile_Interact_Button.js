@@ -12,7 +12,11 @@ const handleVisible = () => {
 <div className=" absolute flex ml-2 lg:ml-40 " >
 <div className=" inline-block">
   <div>
-    <button type="button" className="justify-end items-center inline-flex p-2 rounded-full border border-1 border-black bg-color-winter-button rounded-lg hover:bg-color-winter-header hover:text-color-font-light shadow-md shadow-color-font-dark hover:transition-shadow hover:shadow-sm hover:shadow-color-font-dark focus:bg-color-winter-header focus:text-color-font-light" id="menu-button" aria-expanded="true" aria-haspopup="true" 
+    <button type="button" className="justify-end items-center inline-flex 
+    p-2
+    bg-color-winter-button rounded-lg 
+    hover:bg-color-winter-header hover:text-color-font-light hover:transition-shadow hover:shadow-sm hover:shadow-color-font-dark 
+    shadow-md shadow-color-font-dark" id="menu-button" aria-expanded="true" aria-haspopup="true" 
     onClick={handleVisible}> <p className='lg:font-[font-got]'>Interact</p>
       {/* <svg className="mt-1 mr-1 ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
