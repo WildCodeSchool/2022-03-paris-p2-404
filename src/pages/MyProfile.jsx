@@ -20,7 +20,7 @@ function MyProfile() {
         axios
             .get(`http://localhost:8000/api/myprofile`)
             .then(res => {
-                console.log(res.data);
+                console.log(res);
                 return res.data;
             })
             .then(data => setProfiles(data));
