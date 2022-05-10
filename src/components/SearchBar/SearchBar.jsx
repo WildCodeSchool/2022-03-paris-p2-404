@@ -6,14 +6,17 @@ import { Link } from 'react-router-dom';
 
 export const SearchBar = () => {
   const [characters, setCharacters] = useState([]);
-  const url = 'https://thronesapi.com/api/v2/Characters';
 
   useEffect(() => {
     axios
-      .get(url)
+      .get(`/api/users/`, {withCredentials: true})
       .then((res) => res.data)
-      .then((data) => setCharacters(data));
+      .then((data) => {
+        console.log(data);
+        setCharacters(data)});
   }, []);
+
+  console.log(characters);
 
   const [value, setValue] = useState('');
 
@@ -61,25 +64,27 @@ export const SearchBar = () => {
        bg-slate-300  border-black  empty:border-0 shadow-md shadow-color-font-dark">
         {characters
           .filter((character) => {
+            if (character.full_name) {
             const searchCharacter = value.toLocaleLowerCase();
-            const fullName = character.fullName.toLowerCase();
-
+            const fullName = character.full_name.toLowerCase();
+            
             return (
               searchCharacter &&
               fullName.includes(searchCharacter) &&
               fullName !== searchCharacter
             );
+            }
           })
           .slice(0, 10) // limit to 10 results
           .map((character, index) => (
-            <Link to={`/users/${(character.id +1)}`} key={index}>
+            <Link to={`/users/${(character.id)}`} key={index}>
             <div
-              onClick={() => onSearch(character.fullName)}
+              onClick={() => onSearch(character.full_name)}
               
               key={index}
               className="dropdown-row rounded-lg p-1 cursor-pointer  hover:bg-color-winter-header hover:text-color-font-light"
             >
-              {character.fullName}
+              {character.full_name}
             </div>
             </Link>
           ))}
