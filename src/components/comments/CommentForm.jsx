@@ -58,7 +58,7 @@ export const CommentForm = (props) => {
           class="border-0 w-full h-8 rounded-2xl px-2 my-2 shadow-inner shadow-color-winter-header "
         />
         <button onClick={handleClickIncrement}
-                  className="search-button absolute  w-8 h-8 right-8 px-2 mt-3 
+                  className="search-button absolute  w-8 h-8 right-8 px-2 mt-2 mr-2
                   text-color-winter-footer  font-light rounded-full border-black text-color-winter-header cursor-pointer hover:text-color-font-dark  "
                   ><AddCommentIcon/></button>
         
