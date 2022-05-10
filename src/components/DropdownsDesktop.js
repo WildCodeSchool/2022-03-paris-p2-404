@@ -19,7 +19,7 @@ const [character, setCharacter] = useState({});
 
 useEffect(() => {
   axios
-      .get(`https://thronesapi.com/api/v2/Characters/2`)
+      .get(`/api/myprofile`, {withCredentials: true})
       .then((res) => res.data)
       .then((data) => setCharacter(data));
   }, []);
@@ -34,7 +34,7 @@ useEffect(() => {
       focus:ring-offset-gray-100 focus:{color-winter-primary}" 
       id="menu-button" aria-expanded="true" aria-haspopup="true" 
     onClick={handleVisible}>
-      <img src={character.imageUrl} alt='ProfilePicture' className="rounded-full object-fit"/>
+      <img src={character.list_imageUrl} alt='ProfilePicture' className="rounded-full object-fit"/>
     </button>
   </div>
   {showMenu &&    /* It's like if/else */
