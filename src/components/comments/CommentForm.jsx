@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import ChatIcon from '@mui/icons-material/Chat';
 import { LikeCounter } from '../LikeCounter';
-import EditIcon from '@mui/icons-material/Edit';
+import AddCommentIcon from '@mui/icons-material/AddComment';
 
 export const CommentForm = (props) => {
   const [input, setInput] = useState('');
@@ -18,7 +18,6 @@ export const CommentForm = (props) => {
       id: Math.floor(Math.random() * 10000),
       text: input,
     });
-
     setInput('');
   };
 
@@ -58,10 +57,10 @@ export const CommentForm = (props) => {
           onChange={handleChange}
           class="border-0 w-full h-8 rounded-2xl px-2 my-2 shadow-inner shadow-color-winter-header "
         />
-        <span onClick={handleClickIncrement}
+        <button onClick={handleClickIncrement}
                   className="search-button absolute  w-8 h-8 right-8 px-2 mt-3 
                   text-color-winter-footer  font-light rounded-full border-black text-color-winter-header cursor-pointer hover:text-color-font-dark  "
-                  ><EditIcon/></span>
+                  ><AddCommentIcon/></button>
         
       
       </form>
