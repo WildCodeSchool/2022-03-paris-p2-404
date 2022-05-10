@@ -8,6 +8,8 @@ import { CoverPictures } from "../components/coverPictures/CoverPictures";
 import Profile_Interact_Button from "../components/Profile_Interact_Button";
 import { UserPost } from "../components/UserPost";
 import { useParams } from "react-router-dom";
+import MobileFooter from "../components/MobileFooter";
+import MobileHeader from "../components/MobileHeader";
 
 
 function MyProfile() {
@@ -30,7 +32,12 @@ function MyProfile() {
 
     return (
         <div>
+           <div className="hidden sm:hidden md:inline">
             <Navbar />
+            </div>
+            <div className="md:hidden">
+            <MobileHeader />
+            </div>
             <div className="profilecontent flex flex-col items-center ">
                 <div className="relative flex flex-col items-center">
                     <CoverPictures profiles={profiles} />
@@ -55,6 +62,9 @@ function MyProfile() {
                     <div>
                       {Array.apply(null, {length: ((Math.random()*30)+1)}).map(item => <UserPost />)}
                     </div>
+                </div>
+                <div className="w-full md:hidden">
+                    <MobileFooter />
                 </div>
             </div>
         </div>

@@ -33,4 +33,4 @@ const MobileHeader = () =>  {
     )};
 
  
- export default MobileHeader
+ export default MobileHeader;

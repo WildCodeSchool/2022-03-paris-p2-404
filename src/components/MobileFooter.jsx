@@ -19,7 +19,7 @@ function MobileFooter() {
           <NavLink to="/latest" className="flex w-1/4 justify-center items-center">
               <img  className="h-3/4" src={trumpetLogo} alt="trumpet icon" />
           </NavLink>
-          <NavLink to="myprofile" className="flex w-1/4 justify-center items-center">
+          <NavLink to="/myprofile" className="flex w-1/4 justify-center items-center">
               <img  className="h-3/4" src={queenLogo} alt="queen icon" />
           </NavLink>
         </div>
