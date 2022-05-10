@@ -24,11 +24,11 @@ function ProfileQuote() {
       const oneQuote = quotes[Math.floor(Math.random()*quotes.length)];
 
         return (
-          <div>
+          <div className="my-4 text-xl">
             {/* {quotes.filter((item, index, array) => {
               return index === (Math.floor(Math.random()*array.length));
             }).map(quote => <p key={quote[0].sentence}>{`"${quote[0].sentence}"`}</p>)} */}
-           <p>{quoteExist ? oneQuote && oneQuote.sentence : defaultQuote}</p>
+           <p>{`"${quoteExist ? oneQuote && oneQuote.sentence : defaultQuote}"`}</p>
           </div>
           
         )

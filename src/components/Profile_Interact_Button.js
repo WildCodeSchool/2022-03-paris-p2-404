@@ -24,7 +24,7 @@ const handleVisible = () => {
     </button>
   </div>
   {showMenu &&   
-  <div onMouseLeave={()=> setShowMenu(!showMenu)} className="flex mt-2 rounded-md drop-shadow-xl bg-white" 
+  <div onMouseLeave={()=> setShowMenu(!showMenu)} className="flex mt-2 rounded-md shadow-md shadow-color-font-dark bg-white" 
   role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
     <div className="p-0" role="none">
     <button href="submit" className="text-gray-700 block w-full p-3 text-left text-sm hover:bg-color-winter-header hover:text-color-font-light hover:rounded-md lg:font-[font-got]" role="menuitem" tabindex="-1" id="menu-item-0">Duel</button>
