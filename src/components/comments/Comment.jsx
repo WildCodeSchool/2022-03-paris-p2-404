@@ -24,7 +24,8 @@ export const Comment = ({ comments, completeComments }) => {
       <div
         key={comment.id}
         onClick={() => completeComments(comment.id)}
-        className="flex  flex-row gap-4 mx-4 my-0.5 border-t border-black p-4 bg-color-winter-primary"
+        className="flex flex-col items-start lg:flex-row gap-4 mx-4 my-0.5 
+        border-t border-black p-4 bg-color-winter-primary"
       >
         <div className="flex flex-row items-start gap-4">
           <div>
@@ -42,7 +43,8 @@ export const Comment = ({ comments, completeComments }) => {
             <p className="font-light">The wall, today </p>
           </div>
         </div>
-        <div className="flex justify-center items-center text-center bg-opacity-40 rounded-md w-8/12 ">
+        <div className="flex items-center
+        bg-opacity-40 rounded-md w-full lg:ml-4 lg:w-8/12 ">
           "{comment.text}"
         </div>
       </div>
