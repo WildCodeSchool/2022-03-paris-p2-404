@@ -18,7 +18,7 @@ function MyProfile() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/myprofile`, {withCredentials: true})
+            .get(`/api/myprofile`, {withCredentials: true})
             .then(res => {
                 console.log(res);
                 return res.data;

@@ -23,7 +23,7 @@ export const LoginPage = () => {
     console.log(data);
 
     axios
-      .post("http://localhost:8000/api/auth", data, {withCredentials: true})
+      .post("/api/auth", data, {withCredentials: true})
       .then ((res)=>{
         if (res.data === "reject") {
           navigate('/wronglogin');}

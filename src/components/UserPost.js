@@ -30,7 +30,7 @@ export const UserPost = () => {
 
   useEffect(() => {
     axios
-        .get(`http://localhost:8000/api/quotes/${randomId}`, {withCredentials: true})
+        .get(`/api/quotes/${randomId}`, {withCredentials: true})
         .then(res => res.data)
         .then(data => {
           setQuoteExist(true);

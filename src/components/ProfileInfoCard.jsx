@@ -20,7 +20,7 @@ function ProfileInfoCard() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/users/${id}`, {withCredentials: true})
+            .get(`/api/users/${id}`, {withCredentials: true})
             .then(res => res.data)
             .then(data => setProfiles(data));
     }, [id]);
