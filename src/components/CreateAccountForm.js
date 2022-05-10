@@ -19,6 +19,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
     const data = {
       first_name: firstname,
       last_name: lastname,
+      full_name: `${firstname} ${lastname}`,
       title: title,
       family: family,
       list_imageUrl: picture,
