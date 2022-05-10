@@ -70,7 +70,7 @@ export const LoginPage = () => {
             onChange={(e) => setEmail(e.target.value)}
             className="w-4/5 md:w-11/12 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-2 placeholder:pl-3 my-2
-              font-[font-standard] border border-1 border-black bg-slate-200 rounded-xl placeholder:text-gray-600 shadow-sm shadow-color-font-dark
+              font-[font-standard] shadow-inner shadow-color-winter-header bg-slate-200 rounded-full placeholder:text-gray-600
             "
           />
 
@@ -82,16 +82,17 @@ export const LoginPage = () => {
             onChange={(e) => setPassword(e.target.value)}
             className="w-4/5 md:w-11/12 placeholder:text-sm lg:placeholder:text-lg xl:placeholder:text-xl
               py-2 placeholder:pl-3 my-2
-              font-[font-standard] border border-1 border-black bg-slate-200 rounded-xl placeholder:text-gray-600 shadow-sm shadow-color-font-dark
+              font-[font-standard] shadow-inner shadow-color-winter-header bg-slate-200 rounded-full placeholder:text-gray-600
             "
           />
 
           <div className="flex flex-col items-center gap-y-4">
             <input 
               type="submit"
+              value="Log In"
               className="                
                 py-2 xl:py-4 px-3 mb-2 mt-10 lg:mt-10 xl:mt-16
-                font-[font-got] border border-1 border-black bg-color-winter-button rounded-lg hover:bg-color-winter-header hover:text-color-font-light shadow-md shadow-color-font-dark hover:transition-shadow hover:shadow-sm hover:shadow-color-font-dark
+                font-[font-got] bg-color-winter-button rounded-lg hover:bg-color-winter-header hover:text-color-font-light shadow-md shadow-color-font-dark hover:transition-shadow hover:shadow-sm hover:shadow-color-font-dark
               " />
            
             </div>
