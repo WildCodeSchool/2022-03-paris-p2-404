@@ -13,7 +13,7 @@ function ProfileQuote() {
 
   useEffect(() => {
     axios
-        .get(`http://localhost:8000/api/quotes/${id}`)
+        .get(`http://localhost:8000/api/quotes/${id}`, {withCredentials: true})
         .then(res => res.data)
         .then(data => {
           setQuoteExist(true);

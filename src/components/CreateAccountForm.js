@@ -29,7 +29,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
     console.log(data);
 
     axios
-      .post("http://localhost:8000/api/users", data)
+      .post("http://localhost:8000/api/users", data, {withCredentials: true})
       .then ((res)=>{
         console.log(res.data)
         window.location = '/';})

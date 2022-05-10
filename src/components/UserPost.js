@@ -23,14 +23,14 @@ export const UserPost = () => {
   // Fetch API. Get a random character data and store it into character state above
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/users/${randomId}`)
+      .get(`http://localhost:8000/api/users/${randomId}`, {withCredentials: true})
       .then((res) => res.data)
       .then((data) => setCharacter(data));
   }, []);
 
   useEffect(() => {
     axios
-        .get(`http://localhost:8000/api/quotes/${randomId}`)
+        .get(`http://localhost:8000/api/quotes/${randomId}`, {withCredentials: true})
         .then(res => res.data)
         .then(data => {
           setQuoteExist(true);
