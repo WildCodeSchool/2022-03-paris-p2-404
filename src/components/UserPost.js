@@ -39,7 +39,8 @@ export const UserPost = () => {
       }, []);
 
   return (
-    <div className="UserPost relative bg-color-winter-primary w-full my-4 rounded-lg text-color-black shadow-color-font-dark shadow-md">
+    <div className="UserPost relative bg-color-winter-primary w-full my-4 rounded-lg 
+    text-color-black shadow-color-font-dark shadow-md">
       {/* md:w-3/5 */}
       <div className="postHeader  flex flex-row gap-x-4 pt-4 pl-4 pb-4">
         {/* Display profile picture */}
@@ -57,7 +58,7 @@ export const UserPost = () => {
         </div> */}
       </div>
       <hr className="w-full lg:w-10/12 absolute right-0 border-1 border-black" />
-      <div className="postContent px-10">
+      <div className="postContent px-4 lg:px-10">
         {/* Display post content */}
         <UserQuote quotes={quotes} quoteExist={quoteExist} defaultQuote={defaultQuote}/>
       </div>

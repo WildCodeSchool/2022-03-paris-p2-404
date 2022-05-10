@@ -13,7 +13,7 @@ export const UserQuote = (props) => {
 
   
   return (
-    <div className="UserQuote w-full p-7 text-center font-bold text-lg">
+    <div className="UserQuote w-full my-2 lg:p-7 text-center font-bold text-lg">
       <p>{quoteExist ? oneQuote && oneQuote.sentence : defaultQuote}</p>
     </div>
   );

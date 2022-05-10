@@ -54,7 +54,7 @@ function ProfileInfoCard() {
                     <ProfileName profiles={profiles} />
                     <ProfileQuote />
                 </div>
-                <div className="w-4/6">
+                <div className="w-11/12 lg:w-4/6">
                     <div>
                       {Array.apply(null, {length: ((Math.random()*30)+1)}).map(item => <UserPost />)}
                     </div>
