@@ -19,7 +19,7 @@ export const DorneUsersList = () => {
   return (
     <div
       className="northUsersList customshadow
-    w-full h-screen py-4
+    w-full h-screen py-4 pb-8
     bg-white transition-all"
     >
       <div
@@ -27,7 +27,7 @@ export const DorneUsersList = () => {
         flex flex-row justify-center items-center gap-4 my-8 mx-8"
       >
         <img src={maps} alt="#" className="w-12 h-12" />
-        <h2 className="">Dorne's users</h2>
+        <h2 className="">Dorne</h2>
       </div>
 
       <div className="my-8">
