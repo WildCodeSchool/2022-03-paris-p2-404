@@ -27,14 +27,13 @@ export const NorthUsersList = () => {
         flex flex-row justify-center items-center gap-4 my-8 mx-8"
       >
         <img src={maps} alt="#" className="w-12 h-12" />
-        <h2 className="">The North's users</h2>
+        <h2 className="">The North</h2>
       </div>
 
       <div className="my-8">
         {characters
           .filter(
             (character) =>
-              character.firstName.includes('Wylis') ||
               character.firstName.includes('Ramsey') ||
               character.firstName.includes('Roose') ||
               character.firstName.includes('Rickon') ||

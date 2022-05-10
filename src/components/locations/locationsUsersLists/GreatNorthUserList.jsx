@@ -27,7 +27,7 @@ export const GreatNorthUsersList = () => {
         flex flex-row justify-center items-center gap-4 my-8 mx-8"
       >
         <img src={maps} alt="#" className="w-12 h-12" />
-        <h2 className="">The Great North's users</h2>
+        <h2 className="">The Great North</h2>
       </div>
 
       <div className="my-8">
@@ -43,8 +43,8 @@ export const GreatNorthUsersList = () => {
           )
 
           .map((characters, index) => (
-            <div key={index}>
-           <LocationCharacters characters={characters}/>
+            <div key={index} >
+           <LocationCharacters characters={characters} />
             </div>
           ))}
       </div>

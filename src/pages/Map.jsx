@@ -1,6 +1,7 @@
 import { Routes } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import React, { useState } from 'react';
+import ironthrone from '../assets/img/ironthrone.png';
 import dorne from '../assets/img/dorne.png';
 import vale from '../assets/img/vale.png';
 import gnorth from '../assets/img/gnorth.png';
@@ -371,6 +372,24 @@ export const Map = () => {
           {/* <h2 className="countries m-4 text-center lg:text-2xl">The reach</h2> */}
           {/* <h2 className="countries m-4 text-center lg:text-2xl">Stormlands</h2> */}
           {/* <h2 className="countries m-4 text-center lg:text-2xl">Dorne</h2> */}
+
+          <div className="l6
+           flex justify-center
+            w-6/12 my-8">
+            <div className="kingsLanding hover:scale-110 transition-all w-4/12  ">
+              <img
+                onClick={handleVisible9}
+                className="  w-full h-full cursor-pointer"
+                alt="#"
+                src={ironthrone}
+              ></img>
+            </div>
+          </div>
+
+          <hr className='w-11/12
+          my-24
+          border border-black '/>
+          
           <div className="l1 w-full flex justify-center items-center">
             <div className="greatnorth hover:scale-110 transition-all w-6/12  ">
               <img
@@ -450,15 +469,7 @@ export const Map = () => {
               ></img>
             </div>
           </div>
-          {/* <h2 className="countries m-4 text-center lg:text-2xl">King's Landing</h2> */}
-          {/* <div className="  transition-all w-full  ">
-          <img
-          onClick={handleVisible9}
-            className="greatnorth  w-full h-full cursor-pointer"
-            alt="#"
-            src={north}
-          ></img>
-        </div> */}
+          
         </div>
         <div className="lg:hidden w-screen">
           <MobileFooter />
