@@ -4,13 +4,16 @@ import { useState, useEffect } from "react";
 
 export const Comment = ({ comments, completeComments }) => {
   const [characters, setCharacters] = useState([]);
-  const url = "https://thronesapi.com/api/v2/Characters";
 
   useEffect(() => {
     axios
-      .get(url)
+      .get(`/api/myprofile`, {withCredentials: true})
       .then((res) => res.data)
-      .then((data) => setCharacters(data));
+      .then((data) => {
+      console.log(data);
+      setCharacters(data)
+      }
+      );
   }, []);
 
   return comments.map((comment, index) => (
@@ -26,7 +29,7 @@ export const Comment = ({ comments, completeComments }) => {
         <div className="flex flex-row items-start gap-4">
           <div>
             <img
-              src={characters[2].imageUrl}
+              src={characters.list_imageUrl}
               alt="#"
               className="rounded-full w-12 h-auto
        "
@@ -34,7 +37,7 @@ export const Comment = ({ comments, completeComments }) => {
           </div>
           <div>
             <h3 className="flex flex-row font-bold font-got">
-              {characters[2].fullName}
+              {characters.full_name}
             </h3>
             <p className="font-light">The wall, today </p>
           </div>
