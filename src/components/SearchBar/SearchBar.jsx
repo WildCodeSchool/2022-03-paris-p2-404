@@ -12,11 +12,8 @@ export const SearchBar = () => {
       .get(`/api/users/`, {withCredentials: true})
       .then((res) => res.data)
       .then((data) => {
-        console.log(data);
         setCharacters(data)});
   }, []);
-
-  console.log(characters);
 
   const [value, setValue] = useState('');
 
