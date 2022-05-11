@@ -32,7 +32,7 @@ export const Comment = ({ comments, completeComments }) => {
             <img
               src={characters.list_imageUrl}
               alt="#"
-              className="rounded-full w-12 h-auto
+              className="rounded-full w-12 h-12 object-cover
        "
             />
           </div>

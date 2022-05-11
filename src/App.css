@@ -92,7 +92,7 @@ h3 {
 }
 .profilecontent {
   position: absolute;
-  top: 8.3%;
+  top: 7%;
 }
 .customshadow {
   box-shadow: 0px 0px 16px var(--color-font-dark);

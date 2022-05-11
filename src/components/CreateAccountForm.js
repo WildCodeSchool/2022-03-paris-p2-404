@@ -130,7 +130,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
 
               <input
                 placeholder="Password"
-                type="text"
+                type="password"
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
