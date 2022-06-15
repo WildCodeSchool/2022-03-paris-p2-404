@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import fonts */
+
+@font-face {
+  font-family: 'font-standard';
+  src: url('./assets/fonts/fontRobotoSlab.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'font-got';
+  src: url('./assets/fonts/fontGot.ttf');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Standardize fonts */
+
+body {
+  font-family: 'font-standard';
+}
+/* body::-webkit-scrollbar {
+  width: 0 !important;
+}
+body {
+  -ms-overflow-style: none;
+}
+body {
+  overflow: -moz-scrollbars-none;
+} */
+body {
+  scrollbar-width: none;
 }
 
-.App-link {
-  color: #61dafb;
+h1,
+h2,
+h3 {
+  font-family: 'font-got';
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Set CSS variables */
+
+:root {
+  /* Common to both winter and summer modes */
+  --color-font-dark: #252429;
+  --color-font-light: #ffffff;
+  --color-heart-icon: #931613;
+
+  /* Winter mode  */
+  --color-winter-primary: #9fadba;
+  --color-winter-header: #597388;
+  --color-winter-footer: #c4c4c4;
+  --color-winter-background: #e5e7eb;
+  --color-winter-button: #88b1d7;
+
+  /* Winter mode on hover */
+  --color-winter-hover-mobile-footer: #597388;
+  --color-winter-hover-desktop-header: #597388;
+
+  /* Summer mode */
+  --color-summer-primary: #f3f0d7;
+  --color-summer-header: #d9a66d;
+  --color-summer-footer: #d9a66d;
+  --color-summer-background: #e0c097;
+  --color-summer-button: #ecb0b0;
+
+  /* Summer mode on hover */
+  --color-summer-hover-mobile-footer: #f3f0d7;
+  --color-summer-hover-desktop-header: #f3f0d7;
 }
+
+.footerM,
+.headerM,
+.navbar {
+  box-shadow: 0px 0px 16px var(--color-font-dark);
+  position: fixed;
+  z-index: 10000000;
+}
+.headerM {
+  top: 0;
+}
+.footerM {
+  bottom: 0;
+}
+.profilecontent {
+  position: absolute;
+  top: 7%;
+}
+.customshadow {
+  box-shadow: 0px 0px 16px var(--color-font-dark);
+}
+.active {
+  background-color: #88b1d7;
+}
+.ccustomshadow {
+  box-shadow: 1px 0px 16px var(--color-font-dark);
+}
+
+.mapContent {
+  background-image: url('./assets/img/oldpapermap.jpg');
+  background-size: cover;
+  box-shadow: inset 0px 0px 24px 8px var(--color-font-dark);
+  /* display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr; */
+}
+/* .greatnorth {
+  grid-row: 1 / 2;
+  grid-column: 1 / 4;
+}
+.north {
+  grid-row: 2 / 3;
+  grid-column: 1 / 4;
+}
+.iron {
+  grid-row: 3/ 4;
+  grid-column: 2/ 3;
+}
+.mountain {
+  grid-row: 3/ 4;
+  grid-column: 3 / 4;
+}
+.rock {
+  grid-row: 3/ 4;
+  grid-column: 1 / 2;
+}
+.reach {
+  grid-row: 4/ 5;
+  grid-column: 1 / 2;
+}
+.storm {
+  grid-row: 4/ 5;
+  grid-column: 2/3;
+}
+
+.dorne {
+  grid-row: 5/6;
+  grid-column: 1 / 2;
+} */
